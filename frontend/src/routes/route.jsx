@@ -1,25 +1,27 @@
-import React from "react";
-import { useRoutes } from "react-router-dom";
-import Login from "../components/auth/Login.jsx";
-import Register from "../components/auth/Register.jsx";
-import ForgotPassword from "../components/auth/ForgotPassword.jsx";
-import Home from "../components/home/Home.jsx";
-import AdminDashboard from "../components/auth/AdminDashboard.jsx";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import PrivateRoute from "../components/auth/PrivateRoute";
+import Login from "../components/auth/Login";
+import Register from "../components/auth/Register";
+import AdminDashboard from "../components/auth/AdminDashboard";
+import ForgotPassword from "../components/auth/ForgotPassword";
 
-function RoutesComponent() {
-    const routesElement = useRoutes([
-        { path: "/login", element: <Login /> },
-        { path: "/register", element: <Register /> },
-        { path: "/home", element: <Home /> },
-        { path: "/forgot-password", element: <ForgotPassword /> },
-        { path: "/admin-dashboard", element: <AdminDashboard /> },
-    ]);
+const RoutesComponent = () => {
+  return (
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
 
-    return (
-        <>
-            {routesElement}
-        </>
-    );
-}
+        {/* Protected Admin Dashboard Route */}
+        <Route element={<PrivateRoute />}>
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        </Route>
+
+        {/* Default Route */}
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Routes>
+    
+  );
+};
 
 export default RoutesComponent;
