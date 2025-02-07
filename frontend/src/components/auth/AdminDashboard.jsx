@@ -3,14 +3,9 @@ import React from 'react'
 const AdminDashboard = () => {
     return (
         <>
-            <div>AdminDashboard</div>
-            <p className='color: bg-yellow-400'>Dashboard</p>
-            <p className='color: bg-yellow-400'>Dashboard</p>
-            <p className='color: bg-yellow-400'>Dashboard</p>
-            <p className='color: bg-yellow-400'>Dashboard</p>
-            <p className='color: bg-yellow-400'>Dashboard</p>
-            <p className='color: bg-yellow-400'>Dashboard</p>
-            <p className='color: bg-yellow-400'>Dashboard</p>
+            <div>
+                <p className='font-bold text-center justify-center'>Dashboard</p>
+            </div>
         </>
 
     )
