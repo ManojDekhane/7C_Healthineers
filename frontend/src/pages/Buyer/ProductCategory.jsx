@@ -18,7 +18,7 @@ const ProductCategory = () => {
         <Link to="/" className="block h-full">
           <img
             src={Radiology}
-            alt="Mumbai"
+            alt="Radiology"
             className="w-full h-56 object-cover"
           />
           <div className="p-4 bg-white">
@@ -35,7 +35,7 @@ const ProductCategory = () => {
         <Link to="/Goa" className="block h-full">
           <img
             src={Pathology}
-            alt="Goa"
+            alt="Pathology"
             className="w-full h-56 object-cover"
           />
           <div className="p-4 bg-white">
@@ -52,7 +52,7 @@ const ProductCategory = () => {
         <Link to="/Pune" className="block h-full">
           <img
             src={criticalcare}
-            alt="Pune"
+            alt="Critical care"
             className="w-full h-56 object-cover"
           />
           <div className="p-4 bg-white">
