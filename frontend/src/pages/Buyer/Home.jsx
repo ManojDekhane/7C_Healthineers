@@ -1,6 +1,9 @@
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 const Home = () => {
     return (
       <>
+         <Navbar/>
         {/* Full Page Background Image */}
         <div
           className="w-full min-h-screen bg-cover relative top-20"
@@ -79,6 +82,7 @@ const Home = () => {
         </p>
       </div>
     </div>
+    <Footer/>
       </>
     );
   };
