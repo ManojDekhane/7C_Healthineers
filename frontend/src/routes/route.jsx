@@ -6,6 +6,7 @@ import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
 import AdminDashboard from "../components/auth/AdminDashboard";
 import ForgotPassword from "../components/auth/ForgotPassword";
+import ContactUs from "../components/ContactUs/ContactUs";
 
 const RoutesComponent = () => {
   return (
@@ -14,6 +15,7 @@ const RoutesComponent = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/contact-us" element={<ContactUs />} />
 
         {/* Protected Admin Dashboard Route */}
         <Route element={<PrivateRoute />}>

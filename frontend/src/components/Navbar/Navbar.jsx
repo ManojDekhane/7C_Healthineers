@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaPhone, FaBars, FaTimes } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo and Menu in One Line */}
             <div className="flex items-center space-x-10 w-full justify-between">
-              <img src="/logo.png" alt="Logo" className="h-12" />
+              <img src={logo} alt="Logo" className="h-12" />
               
               {/* Menu Items - Tailwind Converted */}
               <ul className="hidden md:flex items-center space-x-6 text-black font-medium">
@@ -64,3 +65,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
