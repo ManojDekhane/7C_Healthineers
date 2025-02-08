@@ -1,20 +1,20 @@
 import React from "react";
+
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer"
+
 
 import RoutesComponent from "./routes/route";
-const App = () => {
+
+
+
+import { AuthProvider } from "./contexts/authContext/firebaseContext";
+
+function App() {
   return (
-   
-    <>
-    
+    <AuthProvider>
       <RoutesComponent />
-      
-  
-    </>
-   
+    </AuthProvider>
   );
-};
+}
 
 export default App;
