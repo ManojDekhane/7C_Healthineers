@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaPhone, FaBars, FaTimes } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
-import logo from '../../assets/logo.png'
+import logo from "../../assets/SevenC-logo/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ const Navbar = () => {
                 <li><Link to="/" className="px-4 py-2 hover:text-sky-600">Home</Link></li>
                 <li><Link to="/" className="px-4 py-2 hover:text-sky-600">About</Link></li>
 
-                <li><Link to="/ProductCategory" className="px-4 py-2 hover:text-sky-600">Products</Link></li>
+                <li><Link to="/product-category" className="px-4 py-2 hover:text-sky-600">Products</Link></li>
                 <li><Link to="/" className="px-4 py-2 hover:text-sky-600">Gallery</Link></li>
                 <li><Link to="/" className="px-4 py-2 hover:text-sky-600">Contact</Link></li>
               </ul>
@@ -55,7 +55,7 @@ const Navbar = () => {
               <li><Link to="/" className="px-4 py-2 hover:text-sky-600">Home</Link></li>
               <li><Link to="/" className="px-4 py-2 hover:text-sky-600">About</Link></li>
 
-              <li><Link to="/ProductCategory" className="px-4 py-2 hover:text-sky-600">Products</Link></li>
+              <li><Link to="/product-category" className="px-4 py-2 hover:text-sky-600">Products</Link></li>
               <li><Link to="/" className="px-4 py-2 hover:text-sky-600">Gallery</Link></li>
               <li><Link to="/" className="px-4 py-2 hover:text-sky-600">Contact</Link></li>
             </ul>
