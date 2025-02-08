@@ -1,5 +1,5 @@
 import React from 'react';
-import { doSignOut } from '../../firebase/auth';
+import { doSignOut } from '../../../firebase/auth';
 
 const AdminDashboard = () => {
     return (
