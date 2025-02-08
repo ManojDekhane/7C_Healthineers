@@ -7,11 +7,13 @@ import Register from "../components/auth/Register";
 import AdminDashboard from "../components/auth/AdminDashboard";
 import ForgotPassword from "../components/auth/ForgotPassword";
 import ContactUs from "../components/ContactUs/ContactUs";
+import ProductCategory from "../Pages/Buyer/ProductCategory";
 
 const RoutesComponent = () => {
   return (
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/ProductCategory" element={<ProductCategory />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
