@@ -16,6 +16,7 @@ import ProductSubCategoryPage from "../pages/Buyer/ProductSubCategory/ProductSub
 import ProductListPage from "../pages/Buyer/ProductList/ProductListPage";
 
 import AdminDashboard from "../pages/Seller/AdminDashboard/AdminDashboard";
+import ProductDetail from "../components/ProductDetail/ProductDetail"
 
 const RoutesComponent = () => {
   return (
@@ -29,6 +30,8 @@ const RoutesComponent = () => {
         <Route path="/product-category" element={<ProductCategoryPage />} />
         <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />
         <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />
+        <Route path="/product/:productName" element={<ProductDetail />} />
+
       </Route>
 
       {/* Protected Admin Dashboard Route (without Layout) */}
