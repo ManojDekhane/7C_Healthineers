@@ -36,15 +36,22 @@ const Navbar = () => {
         <div className="flex items-center space-x-5 animate-fade-in">
           <div className="flex items-center space-x-2">
             <MdLocationOn className="animate-bounce text-lg" />
-            <span>Pune</span>
+            <a
+              href="https://www.google.co.in/maps/place/Suswani+Complex/@18.4657128,73.8893891,19.17z/data=!4m6!3m5!1s0x3bc2ea603a5daa79:0x45d5771073c08eb4!8m2!3d18.4657647!4d73.889762!16s%2Fg%2F11c5s3gghj?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:font-semibold"
+            >
+              Pune
+            </a>
           </div>
           <div className="flex items-center space-x-2">
             <FaPhone className="animate-pulse transform scale-x-[-1]" />
-            <span>08048890652</span>
+            <span>+91 8484845154</span>
           </div>
           <div className="flex items-center space-x-2">
             <HiOutlineMail className="animate-spin-slow text-xl" />
-            <span>abc@gmail.com</span>
+            <span>KmKazi@7chealthineers.com</span>
           </div>
         </div>
       </div>
