@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import productData from "../../productData";
+import ProductDemoRequest from "../ProductDemoRequest/ProductDemoRequest";
 
 const ProductDetail = () => {
   const { productName } = useParams();
@@ -9,7 +10,7 @@ const ProductDetail = () => {
   const productLookup = useMemo(() => {
     return productData.reduce((acc, category) => {
       (category.subCategories || []).forEach(subCategory => {
-        (subCategory.products || []).forEach(product => {  
+        (subCategory.products || []).forEach(product => {
           acc[product.name.toLowerCase()] = product;
         });
       });
@@ -19,6 +20,7 @@ const ProductDetail = () => {
 
   const product = productLookup[decodedProductName] || null;
   const [loading, setLoading] = useState(true);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -79,6 +81,21 @@ const ProductDetail = () => {
           </div>
         </div>
       )}
+
+      {/* Get Demo Button */}
+      {/* Get Demo Button */}
+      <div className="flex justify-center mt-6">
+        <button
+          className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-3 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transform hover:scale-110 transition duration-300"
+          onClick={() => setModalOpen(true)}
+        >
+          🚀 Get a Demo
+        </button>
+      </div>
+
+      {/* Product Demo Request Modal */}
+      <ProductDemoRequest isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+
     </div>
   );
 };

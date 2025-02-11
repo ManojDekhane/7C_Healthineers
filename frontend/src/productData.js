@@ -9,6 +9,20 @@ import g_scan_brio from "../src/assets/MRI-images/MRI/g-scan-brio.webp";
 import o_scan from "../src/assets/MRI-images/MRI/o-scan.webp";
 import s_scan from "../src/assets/MRI-images/MRI/esaote-s-scan.webp";
 
+//Ultrasound products
+import MyLabA50 from "./assets/Ultrasound/Ultrasound/MyLab-A50.webp";
+import MyLabA70 from "./assets/Ultrasound/Ultrasound/MyLab-A70.webp";
+import MyLab_omega from "./assets/Ultrasound/Ultrasound/MyLab-omega.webp";
+import MyLab_X5 from "./assets/Ultrasound/Ultrasound/mylab-x5.webp";
+import MyLab_X6 from "./assets/Ultrasound/Ultrasound/mylab-x6.webp";
+import MyLab_X7 from "./assets/Ultrasound/Ultrasound/mylab-x7.webp";
+import MyLabTM9_platform from "./assets/Ultrasound/Ultrasound/MyLabTM9_platform.webp";
+import MyLabTMSigma from "./assets/Ultrasound/Ultrasound/MyLabTMSigma.webp";
+import MyLabTMX1 from "./assets/Ultrasound/Ultrasound/MyLabTMX1.webp";
+import MyLabTMX8 from "./assets/Ultrasound/Ultrasound/MyLabTMX8.webp";
+import MyLabTMX75 from "./assets/Ultrasound/Ultrasound/MyLabTMX75.webp";
+import MyLabTMX90 from "./assets/Ultrasound/Ultrasound/MyLabTMX90.webp";
+
 const productData = [
     {
         category: "Radiology and Diagnostic",
@@ -86,7 +100,8 @@ const productData = [
                 image: "/images/ultrasound.jpg",
                 products: [
                     {
-                        name: "MyLab™X90", image: "/images/mylab-x90.jpg",
+                        name: "MyLab™X90", 
+                        image: MyLabTMX90,
                         description: "The ultimate in ultrasound imaging, MyLab™X90 is designed to deliver exceptional image quality and advanced clinical solutions. As a premium ultrasound system with Augmented Insight™, it simplifies workflow in repetitive tasks, complex procedures, and lesion analysis while enhancing diagnostic confidence. With its cutting-edge imaging technology, MyLab™X90 enables healthcare professionals to conduct precise, efficient, and comprehensive examinations across various clinical settings. This system is engineered to enhance diagnostic capabilities by providing high-resolution imaging, superior contrast, and deeper penetration, ensuring every detail is captured with unparalleled clarity.",
                         features: [
                             { title: "Augmented Insight™", description: "Enhances workflow efficiency, examination confidence, and time savings by integrating intelligent automation and AI-driven tools." },
@@ -96,7 +111,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™9 Platform", image: "/images/mylab-9.jpg",
+                        name: "MyLab™9 Platform", 
+                        image: MyLabTM9_platform,
                         description: "Designed to support a full range of diagnostic imaging environments, the MyLab™9 Platform provides superior visualization tools and enhanced image clarity to aid informed clinical decisions. Experience the ergonomic Italian design and intuitive interface that boost productivity. This advanced ultrasound system is tailored to meet the needs of various clinical specialties, from cardiology and radiology to musculoskeletal and vascular imaging. It features an intelligent interface that allows seamless interaction, improving workflow efficiency and overall diagnostic confidence. The MyLab™9 Platform ensures users can perform high-precision imaging while maintaining patient comfort and ease of use.",
                         features: [
                             { title: "easyMODE", description: "A unique touch tool that optimizes images using real-time intelligent algorithms, ensuring a consistent and high-quality diagnostic output." },
@@ -106,7 +122,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™X8 Platform", image: "/images/mylab-x8.jpg",
+                        name: "MyLab™X8 Platform", 
+                        image: MyLabTMX8,
                         description: "Accelerate your workflow with MyLab™X8, an innovative ultrasound system featuring a highly intuitive user interface and advanced clinical tools tailored to your needs. Built with a focus on efficiency and performance, this system integrates state-of-the-art imaging technologies, enabling rapid assessments with superior diagnostic accuracy. Whether used in radiology, cardiology, or women's health, MyLab™X8 is equipped to handle a wide range of applications with its advanced transducer technology and cutting-edge automation functions.",
                         features: [
                             { title: "Transducer Connectors", description: "Supports up to 5 transducers for rapid probe switching in demanding clinical settings, minimizing examination downtime." },
@@ -116,7 +133,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™X75", image: "/images/mylab-x75.jpg",
+                        name: "MyLab™X75", 
+                        image: MyLabTMX75,
                         description: "MyLab™X75 offers an extraordinary level of image clarity and scanning fluidity across all applications in general imaging, cardiovascular, women’s health, and shared service. It is designed to enhance patient care and increase daily productivity with automatic optimization tools. The smart ergonomic design and silent operation provide comfort to both patients and operators in every clinical setting.",
                         features: [
                             { title: "Automated Advanced Functions", description: "Expands diagnostic capabilities across multiple applications, ensuring accurate and consistent imaging." },
@@ -126,7 +144,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™A70", image: "/images/mylab-a70.jpg",
+                        name: "MyLab™A70", 
+                        image: MyLabA70,
                         description: "MyLab™A70 is designed with agility and efficiency in mind, offering high-quality imaging for advanced patient care while adapting to any clinical setting. The system features integrated AI-driven tools that act as a co-pilot, streamlining workflows and enhancing user confidence in diagnoses.",
                         features: [
                             { title: "24” Opti-Light Barco Monitor (Optional)", description: "Provides superior detail enhancement and real-time backlit lighting for optimal image visualization." },
@@ -136,7 +155,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™A50", image: "/images/mylab-a50.jpg",
+                        name: "MyLab™A50", 
+                        image: MyLabA50,
                         description: "Designed for agility, MyLab™A50 is a versatile ultrasound system that delivers high performance in all clinical settings. Its user-friendly interface and workflow ensure optimal comfort during scans. Integrated AI-driven tools act as a co-pilot, enhancing efficiency and diagnostic confidence while prioritizing patient care.",
                         features: [
                             { title: "13.3” Wide Touchscreen", description: "Multi-function tablet-like touchscreen for an intuitive user experience." },
@@ -146,7 +166,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™X7", image: "/images/mylab-x7.jpg",
+                        name: "MyLab™X7", 
+                        image: MyLab_X7,
                         description: "MyLab™X7 technology empowers clinicians to make faster, more reliable decisions with its highly intuitive usability and ergonomic design. This resilient, eco-friendly, and mobile ultrasound system delivers exceptional image quality and an optimally simple interface for significantly faster outputs. The IPS technology LED monitor enhances image clarity, while advanced hemodynamic evaluation with high sensitivity and high spatial resolution allows for confident assessments, even in complex cases.",
                         features: [
                             { title: "Complete Advanced Clinical Tools", description: "Facilitates fast and precise diagnostics." },
@@ -156,7 +177,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™X6", image: "/images/mylab-x6.jpg",
+                        name: "MyLab™X6", 
+                        image: MyLab_X6,
                         description: "The MyLab™ X6 is an innovative cart-based ultrasound system designed to enhance workflow efficiency and elevate clinical performance through its cutting-edge imaging technology. This advanced system is equipped with a 21.5-inch HD IPS LED monitor, which delivers exceptional image clarity, ensuring accurate and detailed diagnostic assessments across various medical specialties.With its fast response time and intuitive user interface, the MyLab™ X6 seamlessly adapts to different clinical environments, making it an ideal choice for a wide range of applications, from general imaging and cardiology to obstetrics and musculoskeletal assessments. Its ergonomic design and smart functionalities enhance user comfort, enabling effortless operation even in demanding healthcare settings.",
                         features: [
                             { title: "Tailored Configuration", description: "Offers customizable settings to suit specific clinical requirements, allowing healthcare professionals to optimize imaging parameters for enhanced diagnostic accuracy." },
@@ -166,7 +188,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™X5", image: "/images/mylab-x5.jpg",
+                        name: "MyLab™X5", 
+                        image: MyLab_X5,
                         description: "The MyLab™ X5 is a state-of-the-art console ultrasound system designed to meet the diverse imaging needs of healthcare professionals across multiple clinical applications. Combining ergonomic design, intuitive functionality, and high-performance imaging technology, this system ensures a seamless and efficient workflow while delivering exceptional diagnostic accuracy.Built with a focus on ease of use and operator comfort, the MyLab™ X5 features an intuitive user interface with responsive controls, allowing for effortless navigation and real-time image adjustments. The system’s advanced imaging capabilities enable the visualization of even the most intricate anatomical structures, ensuring accurate assessments in a variety of clinical scenarios, including cardiology, vascular imaging, musculoskeletal evaluations, and general diagnostics.",
                         features: [
                             { title: "Fast and Easy Workflow", description: "Optimized for rapid and seamless operation." },
@@ -176,7 +199,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™Omega", image: "/images/mylab-omega.jpg",
+                        name: "MyLab™Omega", 
+                        image: MyLab_omega,
                         description: "MyLab™Omega is a high-end, portable, multidisciplinary ultrasound unit featuring an ergonomic design. Built with an advanced imaging engine and powered by Windows® 10, it delivers unparalleled accuracy, quality, and versatility across clinical applications.",
                         features: [
                             { title: "Swiveling 15.6” Monitor", description: "Touchscreen with rotating and tilting functionality for improved usability." },
@@ -185,7 +209,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™Sigma", image: "/images/mylab-sigma.jpg",
+                        name: "MyLab™Sigma", 
+                        image: MyLabTMSigma,
                         description: "The MyLab™ Sigma represents the latest generation of portable ultrasound technology, engineered to provide fast, precise, and reliable diagnostics in any clinical environment. Whether in hospitals, emergency rooms, intensive care units, outpatient clinics, or field settings, this compact yet powerful ultrasound unit delivers exceptional imaging performance and seamless usability, making it an essential tool for modern healthcare professionals.Designed with extreme agility and versatility, the MyLab™ Sigma features an onboard dual-probe connector, ensuring quick transitions between different transducers to accommodate a variety of clinical applications, including abdominal, vascular, musculoskeletal, cardiac, and point-of-care ultrasound (POCUS) assessments. The system can be further expanded to support four probe connectors when mounted on its dedicated trolley multi-connector, enhancing its adaptability and efficiency in high-demand medical environments.",
                         features: [
                             { title: "Fast and Easy Operation", description: "Streamlined controls for quick diagnostics." },
@@ -195,7 +220,8 @@ const productData = [
                         ]
                     },
                     {
-                        name: "MyLab™X1", image: "/images/mylab-x1.jpg",
+                        name: "MyLab™X1", 
+                        image: MyLabTMX1,
                         description: "The MyLab™ X1 is an ultra-portable, fully touchscreen ultrasound system engineered to provide exceptional mobility, ease of use, and high-quality imaging in a compact, lightweight design. As a next-generation handheld ultrasound unit, it delivers fast, accurate, and reliable diagnostics, making it ideal for a wide range of clinical applications across emergency medicine, critical care, musculoskeletal imaging, vascular assessments, and general diagnostics.Designed with modern healthcare demands in mind, the MyLab™ X1 ensures maximum flexibility, allowing medical professionals to perform scans at the bedside, in the emergency room, in the operating theater, or even in remote locations. The system’s fully touchscreen interface simplifies navigation and streamlines workflow, making examinations quicker and more efficient.A major advantage of the MyLab™ X1 is its fully cleanable, seamless touchscreen, which allows for easy and thorough disinfection, reducing the risk of cross-contamination and ensuring a high standard of infection control in all clinical environments. This makes it an excellent choice for point-of-care ultrasound (POCUS) applications, where hygiene and ease of cleaning are critical considerations.",
                         features: [
                             { title: "Ultra-Light and Portable", description: "Designed for easy transport with a long-lasting battery." },
@@ -236,6 +262,12 @@ const productData = [
                         "image": "/images/lytepack.jpg",
                         "description": "A specialized reagent pack formulated for precise electrolyte analysis in clinical diagnostics."
                     }
+                ]
+            },
+            {
+                name: "Pathology Machines",
+                products: [
+                    
                 ]
             }
         ]

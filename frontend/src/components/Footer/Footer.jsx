@@ -9,6 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           {/* Recently Updated Products */}
           <div>
+            <h3 className="text-2xl font-bold">Sister Companies</h3>
+            <ul className="mb-4 mt-2 text-base font-semibold">
+              <li>Soha biomedical engineers</li>
+              <li>Soha enterprises</li>
+              <li>Soha Biomedical Technology</li>
+            </ul>
             <h4 className="text-lg font-semibold mb-4">Recently Updated Products</h4>
             <ul className="space-y-2">
               {[
@@ -48,7 +54,7 @@ const Footer = () => {
                   <img src={logo} alt="7C Healthineers" className="h-14 w-14 rounded-full transform scale-x-150 scale-y-110" />
                 </div>
                 <div>
-                  <h5 className="text-lg font-bold">7C Healthineers</h5>
+                  <h5 className="text-lg font-bold">SevenC Healthineers</h5>
                 </div>
               </div>
               <div className="flex space-x-4 mb-6">
