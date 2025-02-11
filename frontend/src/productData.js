@@ -23,6 +23,9 @@ import MyLabTMX8 from "./assets/Ultrasound/Ultrasound/MyLabTMX8.webp";
 import MyLabTMX75 from "./assets/Ultrasound/Ultrasound/MyLabTMX75.webp";
 import MyLabTMX90 from "./assets/Ultrasound/Ultrasound/MyLabTMX90.webp";
 
+//  SubCategory Images
+import mri from "../src/assets/images/mri.webp";
+import ultrasound from "../src/assets/images/Ultrasound.jpg";
 const productData = [
     {
         category: "Radiology and Diagnostic",
@@ -31,7 +34,7 @@ const productData = [
         subCategories: [
             {
                 name: "MRI Versions",
-                image: "/images/mri.jpg",
+                image: mri,
                 products: [
                     {
                         name: "Magnifico Open",
@@ -97,7 +100,7 @@ const productData = [
             },
             {
                 name: "Ultrasound",
-                image: "/images/ultrasound.jpg",
+                image: ultrasound,
                 products: [
                     {
                         name: "MyLab™X90", 
@@ -240,7 +243,7 @@ const productData = [
         image: Pathology,
         subCategories: [
             {
-                "name": "Pathology Consumable",
+                "name": "Pathology Consumable(Reagents)",
                 "products": [
                     {
                         "name": "Diluent-S[20L]",
@@ -267,6 +270,21 @@ const productData = [
             {
                 name: "Pathology Machines",
                 products: [
+                    {
+                        "name": "XP300",
+                        "image": "/images/diluent-s.jpg",
+                        "description": "A high-quality diluent solution for laboratory use, ensuring accurate and reliable results."
+                    },
+                    {
+                        "name": "Orbit Smart 7",
+                        "image": "/images/lyse-s.jpg",
+                        "description": "An advanced lysis solution designed for optimal sample preparation and cell analysis."
+                    },
+                    {
+                        "name": "Patholyte Advance",
+                        "image": "/images/s-clean.jpg",
+                        "description": "A powerful cleaning solution for maintaining laboratory equipment and ensuring contamination-free testing."
+                    },
                     
                 ]
             }

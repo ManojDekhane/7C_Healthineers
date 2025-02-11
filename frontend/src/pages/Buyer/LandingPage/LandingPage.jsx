@@ -2,21 +2,25 @@ import React from "react";
 import ContactUs from "../ContactUs/ContactUs";
 import ProductCard from "../../../components/ProductCard/ProductCard";
 import { Link } from "react-router-dom";
+import s_scan_open  from "../../../assets/LandingPageProduct/s-scan_open.webp";
+import MyLab_A50 from "../../../assets/LandingPageProduct/MyLab-A50.webp";
+import g_scan_brio  from "../../../assets/LandingPageProduct/g-scan-brio.webp";
+
 
 const products = [
   {
-    image: "https://productimages.withfloats.com/tile/678b3ff4222fa4966c5b1702.png",
-    name: "Yumizen CA40 Semi-automated Clinical...",
+    image: s_scan_open,
+    name: "S-scan Open",
     price: "INR 117000",
   },
   {
-    image: "https://productimages.withfloats.com/tile/6633802d0070ce584f5729c4.jpg",
-    name: "AGAPPE Mispa HbX Portable Haemoglobin...",
+    image: MyLab_A50,
+    name: "MyLab™A50",
     price: "INR 19000",
   },
   {
-    image: "https://productimages.withfloats.com/tile/66337f840070ce584f572989.jpg",
-    name: "AGAPPE Mispa Chem Dx Auto Dry Biochemistry...",
+    image: g_scan_brio,
+    name: "G-scan Brio",
     price: "INR 375000",
   },
 ];
@@ -36,9 +40,9 @@ const LandingPage = () => {
       >
         {/* Overlay Card */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-10 shadow-2xl rounded-2xl text-center max-w-3xl z-10">
-          <h1 className="text-4xl font-extrabold text-sky-700">SevenC Healthineers</h1>
+          <h1 className="text-4xl font-extrabold text-sky-700">Seven C Healthineers LLP</h1>
           <p className="text-gray-700 mt-4 text-lg">
-            "Right Here, You Have An Option" Welcome to our "SevenC Healthineers" company! We provide cutting-edge solutions for the healthcare industry.
+            "Right Here, You Have An Option" Welcome to our "Seven C Healthineers LLP" company! We provide cutting-edge solutions for the healthcare industry.
           </p>
 
           {/* Buttons */}
