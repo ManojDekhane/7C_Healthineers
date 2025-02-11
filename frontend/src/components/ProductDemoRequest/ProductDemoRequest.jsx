@@ -1,0 +1,112 @@
+import React, { useState } from "react";
+
+const ProductDemoRequest = ({ isOpen, onClose }) => {
+    const [formData, setFormData] = useState({
+        name: "",
+        userEmail: "",
+        phone: "",
+        demoDateTime: "",
+        comments: "",
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(formData.userEmail)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        try {
+            const response = await fetch("http://localhost:5000/api/request-demo", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ type: "demo", ...formData }),
+            });
+
+            const data = await response.json();
+            alert(data.message);
+
+            if (data.success) {
+                setFormData({ name: "", userEmail: "", phone: "", demoDateTime: "", comments: "" });
+                onClose();
+            }
+        } catch (error) {
+            console.error("Error submitting demo request:", error);
+        }
+    };
+
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 flex items-start justify-center bg-black bg-opacity-50 p-4 pt-36">
+            <div className="bg-white p-6 rounded-xl shadow-2xl w-full max-w-md h-[72vh] flex flex-col">
+                {/* Scrollable container */}
+                <div className="overflow-y-auto flex-grow px-2" style={{ maxHeight: "70vh" }}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Request a Product Demo</h2>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Full Name"
+                            required
+                            className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+                            value={formData.name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="email"
+                            name="userEmail"
+                            placeholder="Email"
+                            required
+                            className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+                            value={formData.userEmail}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                            required
+                            className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+                            value={formData.phone}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="datetime-local"
+                            name="demoDateTime"
+                            required
+                            className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+                            value={formData.demoDateTime}
+                            onChange={handleChange}
+                        />
+                        <textarea
+                            name="comments"
+                            placeholder="Additional Comments (Optional)"
+                            className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+                            value={formData.comments}
+                            onChange={handleChange}
+                        ></textarea>
+                        <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold transition hover:bg-blue-700">
+                            Submit Request
+                        </button>
+                    </form>
+                    {/* Spacer for better scroll visibility */}
+                    <div className="h-4"></div>
+                </div>
+                {/* Close button stays at the bottom */}
+                <button onClick={onClose} className="mt-4 block text-center text-red-500 hover:underline w-full">
+                    Close
+                </button>
+            </div>
+        </div>
+
+    );
+};
+
+export default ProductDemoRequest;

@@ -14,16 +14,23 @@ const ContactUs = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        console.log("Sending data:", { type: "contact", ...formData });
+
         try {
             const response = await fetch("http://localhost:5000/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    type: "contact",
+                    ...formData
+                }),
             });
 
             const data = await response.json();
+            console.log("Response from server:", data);
+            
             if (data.message) {
                 alert("Message Sent Successfully!");
                 setFormData({ name: "", userEmail: "", message: "" });

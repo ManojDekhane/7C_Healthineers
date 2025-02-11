@@ -6,6 +6,7 @@ import Layout from "../routes/Layout";
 // Pages
 import LandingPage from "../pages/Buyer/LandingPage/LandingPage";
 import ContactUs from "../pages/Buyer/ContactUs/ContactUs";
+import ProfilePage from "../pages/Buyer/Profile/ProfilePage";
 
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
@@ -31,6 +32,7 @@ const RoutesComponent = () => {
         <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />
         <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />
         <Route path="/product/:productName" element={<ProductDetail />} />
+        <Route path="/profile" element={<ProfilePage />} />
 
       </Route>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import ContactUs from "../ContactUs/ContactUs";
 import ProductCard from "../../../components/ProductCard/ProductCard";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -35,15 +36,16 @@ const LandingPage = () => {
       >
         {/* Overlay Card */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-10 shadow-2xl rounded-2xl text-center max-w-3xl z-10">
-          <h1 className="text-4xl font-extrabold text-sky-700">7C Healthineers</h1>
+          <h1 className="text-4xl font-extrabold text-sky-700">SevenC Healthineers</h1>
           <p className="text-gray-700 mt-4 text-lg">
-            "Right Here, You Have An Option" Welcome to our "7C Healthineers" company! We provide cutting-edge solutions for the healthcare industry.
+            "Right Here, You Have An Option" Welcome to our "SevenC Healthineers" company! We provide cutting-edge solutions for the healthcare industry.
           </p>
 
           {/* Buttons */}
           <div className="mt-6 flex justify-center space-x-6">
             <button className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:bg-black hover:scale-105">
-              VIEW PRODUCTS
+              <Link to="/product-category">VIEW PRODUCTS</Link>
+              
             </button>
             <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:bg-sky-600 hover:scale-105">
               SEND ENQUIRY
@@ -63,7 +65,7 @@ const LandingPage = () => {
         </div>
         <div className="mt-10">
           <button className="bg-sky-600 hover:bg-black text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:scale-105">
-            VIEW ALL PRODUCTS
+            <Link to="/product-category">VIEW ALL PRODUCTS</Link>
           </button>
         </div>
       </div>

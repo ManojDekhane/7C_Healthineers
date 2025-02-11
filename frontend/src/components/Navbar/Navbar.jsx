@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaPhone, FaBars, FaTimes } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
-import logo from "../../assets/SevenC-logo/logo.png";
+import logo from "../../assets/SevenC-logo/SevenC_Healthineers_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,12 @@ const Navbar = () => {
           </div>
           <div className="flex items-center space-x-2">
             <HiOutlineMail className="animate-spin-slow text-xl" />
-            <span>KmKazi@7chealthineers.com</span>
+            <a
+              href="mailto:KmKazi@7chealthineers.com"
+              className="hover:underline hover:font-semibold"
+            >
+              KmKazi@7chealthineers.com
+            </a>
           </div>
         </div>
       </div>
@@ -72,7 +77,7 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <ul className="hidden md:flex items-center gap-x-8 text-black font-medium">
               <li><Link to="/" className="hover:text-sky-600 transition-colors">Home</Link></li>
-              <li><Link to="/" className="hover:text-sky-600 transition-colors">About</Link></li>
+              <li><Link to="/profile" className="hover:text-sky-600 transition-colors">Profile</Link></li>
               <li><Link to="/product-category" className="hover:text-sky-600 transition-colors">Products</Link></li>
               <li><Link to="/" className="hover:text-sky-600 transition-colors">Gallery</Link></li>
               <li><Link to="/" className="hover:text-sky-600 transition-colors">Contact</Link></li>
@@ -112,11 +117,11 @@ const Navbar = () => {
               </li>
               <li className="group">
                 <Link
-                  to="/"
+                  to="/profile"
                   onClick={() => setIsOpen(false)}
                   className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
                 >
-                  About
+                  Profile
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
