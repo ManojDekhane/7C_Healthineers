@@ -15,6 +15,7 @@ const ProductCard = ({ image, name }) => {
       >
         View More
       </Link>
+      
     </div>
    
   );

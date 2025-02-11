@@ -15,33 +15,17 @@ const Footer = () => {
               <li>Soha enterprises</li>
               <li>Soha Biomedical Technology</li>
             </ul>
-            <h4 className="text-lg font-semibold mb-4">Recently Updated Products</h4>
-            <ul className="space-y-2">
-              {[
-                "#semiautoanalyzer",
-                "#biochemistrysolutions",
-                "#semiautolabtech",
-                "#biochemistryprecision",
-                "#semiautodiagnostics",
-              ].map((item, index) => (
-                <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-white transition duration-300">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
+           
           </div>
 
           {/* Opening Hours */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Opening Hours</h4>
             <ul className="space-y-2 text-gray-300">
-              {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day, index) => (
-                <li key={index}>
-                  {day}: <span className="text-white">09:30 AM - 07:00 PM</span>
-                </li>
-              ))}
+
+              <li>Day : Mon-Fri</li>
+              <li>Time: 9:00 am - 7:00 pm </li>
+             
             </ul>
           </div>
 
@@ -54,7 +38,7 @@ const Footer = () => {
                   <img src={logo} alt="7C Healthineers" className="h-14 w-14 rounded-full transform scale-x-150 scale-y-110" />
                 </div>
                 <div>
-                  <h5 className="text-lg font-bold">SevenC Healthineers</h5>
+                  <h5 className="text-lg font-bold">Seven C Healthineers LLP</h5>
                 </div>
               </div>
               <div className="flex space-x-4 mb-6">

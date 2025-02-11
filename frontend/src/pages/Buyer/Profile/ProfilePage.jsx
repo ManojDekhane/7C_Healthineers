@@ -5,12 +5,34 @@ const ProfilePage = () => {
     <div className="container mx-auto mt-32 p-6 text-gray-800">
       {/* Profile Section */}
       <h1 className="text-3xl font-bold text-blue-700 mb-4">Profile</h1>
+     
       <p className="mb-6 text-lg leading-relaxed">
-        Established in the year 2025, we,<strong> SevenC Healthineers</strong>, are an illustrious firm engaged in distributing and trading a wide range of Medical Equipment. Offered range of product includes Anesthesia Workstation, ICU Ventilators, MRI, Ultrasound, Pathology and many more name in the catalog. All our products are manufactured using quality tested raw material with the advanced machines and technologies. To match the variegated requirements of the clients, we offer our entire range in varied sizes, designs, and specifications. Before the final delivery, a team of quality analyzers stringently examines our products to ensure their hygiene, fine finishing, and accuracy of designs.
-        <br /><br />
-        We have constituted a sophisticated infrastructure facility for having proper execution of business activities. Installed with all the machines and technologies necessary for manufacturing hospital equipment, our infrastructure enables us to withstand the growing needs of the clients. Moreover, we have hired a team of experienced professionals to manage and control all the infrastructural activities. All our experts work in harmony among one another to attain the organizational tasks on time and in an efficient way. Owing to the perfect blend of our advanced manufacturing facilities and diligent workforce, we have mustered numerous patrons for ourselves throughout the region.
-        <br /><br />
-        Under the visionary guidance of our mentor, <strong>Mr. Dilshad</strong> and <strong> Mr. Khurshid Kazi </strong> with <strong> 25+ years </strong> of experience in this bio-medical market, we have occupied a commendable status in the highly competitive market. Their managerial skills, detailed knowledge of the industry, and vibrant leadership skills have enabled us to gain the trust of a large number of patrons.
+        <strong>About Us :</strong>
+        <br></br><hr style={{height:"2px",backgroundColor:"black"}}></hr>
+
+      Established in 2025,<strong>Seven C Healthineers LLP</strong> is a <strong>renowned and dynamic</strong> firm specializing in the distribution and trading of top-tier medical equipment. Our cutting-edge product catalog includes state-of-the-art <strong>Anesthesia Workstations, ICU Ventilators, MRI Machines, Ultrasound Systems, Pathology Equipment, and many more.</strong> We are committed to delivering exceptional quality by sourcing products manufactured with <strong>premium-grade materials and revolutionary </strong>technology.
+
+Understanding the <strong>diverse and evolving</strong> needs of our clients, we offer an extensive and versatile range of medical solutions in various sizes, designs, and specifications. To ensure unmatched excellence, a dedicated team of quality analysts meticulously examines our products before final delivery, guaranteeing superior hygiene, pinpoint precision, and optimal performance.
+<br></br>
+<br></br>
+
+
+ <strong>Infrastructure & Expertise :</strong>
+ <br></br><hr style={{height:"2px",backgroundColor:"black"}}></hr>
+
+ We take pride in our <strong>state-of-the-art infrastructure, equipped with</strong><strong>advanced technology and modern facilities</strong> to meet the growing demands of the healthcare industry. Our facility is managed by a highly skilled team of experienced professionals, ensuring seamless operations and outstanding efficiency. The synergy between our <strong>ultra-modern infrastructure and expert workforce</strong> has enabled us to establish a powerful and trusted foothold in the market.
+<br></br>
+<br></br>
+
+ <strong>Leadership & Vision :</strong>
+ <br></br><hr style={{height:"2px",backgroundColor:"black"}}></hr>
+
+Under the <strong>visionary leadership</strong> of <strong> Mr. Dilshad Sayed</strong> and <strong>Mr. Khurshid Kazi, who bring </strong><strong>25+ years of groundbreaking expertise</strong> in the biomedical sector, we have earned a sterling reputation in this highly competitive market. Their strategic brilliance, in-depth industry knowledge, and dynamic leadership have been instrumental in gaining the unwavering trust of numerous clients across the region.
+
+<br></br>
+At Seven C Healthineers LLP, we are backed by a <strong>highly skilled and dedicated team</strong> of professionals who are instrumental in fulfilling the diverse and evolving needs of our clients. Each member of our workforce is an expert in their respective domain, allowing us to efficiently handle even the most complex tasks with ease.
+
+Our team operates with unwavering dedication and synergy, ensuring seamless coordination and maximum productivity. We emphasize continuous learning and development, regularly organizing training programs and seminars to keep our professionals updated with the latest market trends and technological advancements.
       </p>
       
       {/* FactSheet Section */}
@@ -20,25 +42,17 @@ const ProfilePage = () => {
         <ul className="list-disc pl-6">
           <li><strong>Nature of Business:</strong> Wholesaler/Distributor</li>
           <li><strong>Additional Business:</strong> Retail Business</li>
-          <li><strong>Company CEO:</strong> Dilshad Sayyed, Khurshid Kazi</li>
+          <li><strong>Company CEO:</strong> Dilshad Sayed, Khurshid Kazi</li>
           <li><strong>Registered Address:</strong> Shop No.14, Suswani Complex, SR#38 /58, Near Police Station, A/P: Kondhwa Khurd, Pune, India. Pincode: 411048</li>
           <li><strong>Industry:</strong> Trading of Medical Equipment</li>
           <li><strong>Total Number of Employees:</strong> Up to 10 People</li>
-          <li><strong>GST Registration Date:</strong> 01-02-2025</li>
-          <li><strong>Legal Status of Firm:</strong> Proprietorship</li>
+          <li><strong>Legal Status of Firm:</strong> LLP</li>
           <li><strong>Promoter:</strong> Mr. Dilshad Sabirali Syed, Khurshid Kazi</li>
-          <li><strong>Annual Turnover:</strong> 5 - 25 Cr</li>
+         
         </ul>
       </div>
 
-      {/* Infrastructure Section */}
-      <h2 className="text-2xl font-bold text-blue-700 mt-6 mb-4">Infrastructure</h2>
-      <ul className="list-disc pl-6">
-        <li><strong>Location Type:</strong> URBAN</li>
-        <li><strong>Building Infrastructure:</strong> Permanent</li>
-        <li><strong>Size of Premises:</strong> 700 square feet</li>
-        <li><strong>Space Around:</strong> Front porch</li>
-      </ul>
+     
 
       {/* Company USP Section */}
       <h2 className="text-2xl font-bold text-blue-700 mt-6 mb-4">Company USP</h2>
@@ -50,31 +64,17 @@ const ProfilePage = () => {
         <li>Quality Measures / Testing Facilities: Yes</li>
       </ul>
 
-      {/* Statutory Profile Section */}
-      <h2 className="text-2xl font-bold text-blue-700 mt-6 mb-4">Statutory Profile</h2>
-      <ul className="list-disc pl-6">
-        <li><strong>Import Export Code (IEC):</strong> 31070*****</li>
-        <li><strong>Tan No.:</strong> NSKJ0*****</li>
-        <li><strong>Banker:</strong> HDFC BANK</li>
-        <li><strong>GST No.:</strong> 27ARJPS3434J1ZE</li>
-      </ul>
+      
 
       {/* Packaging/Payment and Shipment Details Section */}
       <h2 className="text-2xl font-bold text-blue-700 mt-6 mb-4">Packaging/Payment and Shipment Details</h2>
       <ul className="list-disc pl-6">
         <li><strong>Customized Packaging:</strong> No</li>
-        <li><strong>Payment Mode:</strong> Cash, Cheque, DD</li>
+        <li><strong>Payment Mode:</strong> NEFT/RTGS/IMPS, Cheque, DD</li>
         <li><strong>Shipment Mode:</strong> By Road</li>
       </ul>
 
-      {/* ISO Certificate Section */}
-      <h2 className="text-2xl font-bold text-blue-700 mt-6 mb-4">ISO Certificate</h2>
-      <div className="bg-gray-100 p-4 rounded-lg shadow-md flex justify-center items-center">
-        <p className="text-lg font-semibold">ISO Certificate. To view, kindly see the image below.</p>
-      </div>
-      <div className="bg-gray-200 mt-6 p-6 rounded-lg shadow-md flex justify-center items-center h-64">
-        <p className="text-lg font-semibold">[Image Placeholder]</p>
-      </div>
+     
       
       {/* Our Team Section */}
       <h2 className="text-2xl font-bold text-blue-700 mt-6 mb-4">Our Team</h2>
