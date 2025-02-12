@@ -23,9 +23,20 @@ import MyLabTMX8 from "./assets/Ultrasound/Ultrasound/MyLabTMX8.webp";
 import MyLabTMX75 from "./assets/Ultrasound/Ultrasound/MyLabTMX75.webp";
 import MyLabTMX90 from "./assets/Ultrasound/Ultrasound/MyLabTMX90.webp";
 
+//Pathology machines
+import Electrolyte_AnalyzersPatholyte from "./assets/PathologyMachines/Electrolyte-AnalyzersPatholyte.png";
+import Smart_7_Advance from "./assets/PathologyMachines/Smart-7-Advance.png";
+import Xp_300 from "./assets/PathologyMachines/Xp-300png.png";
+
+//Patholgoy machine brochures
+import New_Patholyte_Advance_PDF from "./assets/Pathology-Machine-Brochures/New Patholyte Advance (1).pdf";
+import Smart_7_Advance_PDF from "./assets/Pathology-Machine-Brochures/Smart-7 Advance new.pdf";
+import Sysmex_xp300_PDF from "./assets/Pathology-Machine-Brochures/sysmex xp300 .pdf";
+
 //  SubCategory Images
 import mri from "../src/assets/images/mri.webp";
 import ultrasound from "../src/assets/images/Ultrasound.jpg";
+
 const productData = [
     {
         category: "Radiology and Diagnostic",
@@ -248,22 +259,26 @@ const productData = [
                     {
                         "name": "Diluent-S[20L]",
                         "image": "/images/diluent-s.jpg",
-                        "description": "A high-quality diluent solution for laboratory use, ensuring accurate and reliable results."
+                        "description": "A high-quality diluent solution for laboratory use, ensuring accurate and reliable results.",
+                        "price": "3000",
                     },
                     {
                         "name": "Lyse-S[500ml]",
                         "image": "/images/lyse-s.jpg",
-                        "description": "An advanced lysis solution designed for optimal sample preparation and cell analysis."
+                        "description": "An advanced lysis solution designed for optimal sample preparation and cell analysis.",
+                        "price": 3000,
                     },
                     {
                         "name": "S-Clean[100ml]",
                         "image": "/images/s-clean.jpg",
-                        "description": "A powerful cleaning solution for maintaining laboratory equipment and ensuring contamination-free testing."
+                        "description": "A powerful cleaning solution for maintaining laboratory equipment and ensuring contamination-free testing.",
+                        "price": 5000,
                     },
                     {
                         "name": "LytePack[800ml]",
                         "image": "/images/lytepack.jpg",
-                        "description": "A specialized reagent pack formulated for precise electrolyte analysis in clinical diagnostics."
+                        "description": "A specialized reagent pack formulated for precise electrolyte analysis in clinical diagnostics.",
+                        "price": 12000,
                     }
                 ]
             },
@@ -272,18 +287,21 @@ const productData = [
                 products: [
                     {
                         "name": "XP300",
-                        "image": "/images/diluent-s.jpg",
-                        "description": "A high-quality diluent solution for laboratory use, ensuring accurate and reliable results."
+                        "image": Xp_300,
+                        "description": "A high-quality diluent solution for laboratory use, ensuring accurate and reliable results.",
+                        "brochureLink": Sysmex_xp300_PDF,
                     },
                     {
                         "name": "Orbit Smart 7",
-                        "image": "/images/lyse-s.jpg",
-                        "description": "An advanced lysis solution designed for optimal sample preparation and cell analysis."
+                        "image": Smart_7_Advance,
+                        "description": "An advanced lysis solution designed for optimal sample preparation and cell analysis.",
+                        "brochureLink": Smart_7_Advance_PDF,
                     },
                     {
                         "name": "Patholyte Advance",
-                        "image": "/images/s-clean.jpg",
-                        "description": "A powerful cleaning solution for maintaining laboratory equipment and ensuring contamination-free testing."
+                        "image": Electrolyte_AnalyzersPatholyte,
+                        "description": "A powerful cleaning solution for maintaining laboratory equipment and ensuring contamination-free testing.",
+                        "brochureLink": New_Patholyte_Advance_PDF,
                     },
                     
                 ]

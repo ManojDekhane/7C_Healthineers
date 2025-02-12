@@ -7,11 +7,13 @@ const ProductListPage = () => {
     const { subcategoryName } = useParams();
     const decodedSubcategoryName = decodeURIComponent(subcategoryName);
 
+    let selectedCategory = null;
     let selectedProducts = [];
 
     productData.forEach((category) => {
         const subcategory = category.subCategories.find((sub) => sub.name === decodedSubcategoryName);
         if (subcategory) {
+            selectedCategory = category.category;
             selectedProducts = subcategory.products;
         }
     });
@@ -32,7 +34,15 @@ const ProductListPage = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
                 {selectedProducts.map((product, index) => (
-                    <ProductCard key={index} image={product.image} name={product.name} />
+                    <ProductCard 
+                    key={index} 
+                    image={product.image} 
+                    name={product.name} 
+                    category={selectedCategory}
+                    subCategory={decodedSubcategoryName}
+                    brochureLink={product.brochureLink || null}
+                    price={product.price}
+                    />
                 ))}
             </div>
 
