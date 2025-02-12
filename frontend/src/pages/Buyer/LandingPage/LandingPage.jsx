@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import s_scan_open  from "../../../assets/LandingPageProduct/s-scan_open.webp";
 import MyLab_A50 from "../../../assets/LandingPageProduct/MyLab-A50.webp";
 import g_scan_brio  from "../../../assets/LandingPageProduct/g-scan-brio.webp";
+import FeedbackSection from "../FeedbackSection/FeedbackSection";
 
 
 const products = [
@@ -88,6 +89,8 @@ const LandingPage = () => {
           </p>
         </div>
       </div>
+
+      <FeedbackSection />
 
       {/* Contact Section */}
       <div className="m-6">
