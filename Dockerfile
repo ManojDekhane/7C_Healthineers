@@ -29,6 +29,6 @@ CMD ["npm", "start"]
 
 # Stage 3: Serve frontend using Nginx
 FROM nginx:alpine AS frontend
-COPY --from=frontend-build /app/frontend/build /usr/share/nginx/html
+COPY --from=frontend-build /app/frontend/dist /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
