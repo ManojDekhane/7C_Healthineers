@@ -8,10 +8,10 @@ RUN npm install
 
 # Copy the rest of the frontend files and build
 COPY frontend/ ./
-RUN npm run dev
+RUN npm run build
 
 # Stage 2: Setup and run the backend
-FROM node:18 AS backend
+FROM node:20 AS backend
 WORKDIR /app/backend
 
 # Copy only package files first
