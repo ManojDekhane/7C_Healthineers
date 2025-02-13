@@ -1,5 +1,5 @@
 # Stage 1: Build the React frontend
-FROM node:18 AS frontend-build
+FROM node:20 AS frontend-build
 WORKDIR /app/frontend
 
 # Copy only package files first to leverage Docker cache
@@ -8,7 +8,7 @@ RUN npm install
 
 # Copy the rest of the frontend files and build
 COPY frontend/ ./
-RUN npm run build
+RUN npm run dev
 
 # Stage 2: Setup and run the backend
 FROM node:18 AS backend
