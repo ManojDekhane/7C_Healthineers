@@ -50,7 +50,11 @@ const Navbar = () => {
           {/* Phone */}
           <div className="flex items-center space-x-2">
             <FaPhone className="animate-pulse transform scale-x-[-1]" />
-            <span className="hidden sm:block">+91 8484845154</span>
+
+            <a href="tel:+918484845154" className="hover:text-white hover:font-semibold transition duration-300">
+              +91 8484845154
+            </a>
+
           </div>
 
           {/* Email */}
@@ -58,7 +62,9 @@ const Navbar = () => {
             <HiOutlineMail className="text-xl" />
             <a
               href="mailto:KmKazi@7chealthineers.com"
-              className="hover:underline hover:font-semibold hidden sm:block"
+
+              className="hover:font-semibold"
+
             >
               KmKazi@7chealthineers.com
             </a>
@@ -80,14 +86,15 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-x-6 text-black font-medium">
-            <li><Link to="/" className="hover:text-sky-600">Home</Link></li>
-            <li><Link to="/profile" className="hover:text-sky-600">Profile</Link></li>
-            <li><Link to="/product-category" className="hover:text-sky-600">Products</Link></li>
-            <li><Link to="/gallery" className="hover:text-sky-600">Gallery</Link></li>
-            <li><Link to="/contact" className="hover:text-sky-600">Contact</Link></li>
-          </ul>
+            {/* Desktop Menu */}
+            <ul className="hidden md:flex items-center gap-x-8 text-black font-medium">
+              <li><Link to="/" className="hover:text-sky-600 transition-colors">Home</Link></li>
+              <li><Link to="/profile" className="hover:text-sky-600 transition-colors">Profile</Link></li>
+              <li><Link to="/product-category" className="hover:text-sky-600 transition-colors">Products</Link></li>
+              <li><Link to="/gallery" className="hover:text-sky-600 transition-colors">Gallery</Link></li>
+              <li><Link to="/contact-us" className="hover:text-sky-600 transition-colors">Contact</Link></li>
+            </ul>
+
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -109,6 +116,60 @@ const Navbar = () => {
           ref={menuRef}
           className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40 flex justify-center items-start pt-[80px]"
         >
+
+          <div className="w-full bg-white bg-opacity-90 shadow-md p-6 text-center">
+            <ul className="flex flex-col space-y-6 text-lg">
+              <li className="group">
+                <Link
+                  to="/"
+                  onClick={() => setIsOpen(false)}
+                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
+                >
+                  Home
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="group">
+                <Link
+                  to="/profile"
+                  onClick={() => setIsOpen(false)}
+                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
+                >
+                  Profile
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="group">
+                <Link
+                  to="/product-category"
+                  onClick={() => setIsOpen(false)}
+                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
+                >
+                  Products
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="group">
+                <Link
+                  to="/gallery"
+                  onClick={() => setIsOpen(false)}
+                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
+                >
+                  Gallery
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="group">
+                <Link
+                  to="/contact-us"
+                  onClick={() => setIsOpen(false)}
+                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
+                >
+                  Contact
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+
           <div className="w-4/5 max-w-sm bg-white shadow-lg p-5 rounded-md">
             <ul className="flex flex-col space-y-4 text-lg">
               <li><Link to="/" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Home</Link></li>
@@ -116,6 +177,7 @@ const Navbar = () => {
               <li><Link to="/product-category" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Products</Link></li>
               <li><Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Gallery</Link></li>
               <li><Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Contact</Link></li>
+
             </ul>
           </div>
         </div>

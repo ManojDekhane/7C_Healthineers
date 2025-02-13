@@ -1,0 +1,50 @@
+pipeline {
+    agent any;
+    
+    stages {
+        stage ("Pulling code from GitHub repository") 
+        {
+            steps {
+                script {
+                    def repoDir = '7C_Healthineers'
+                    if (fileExists(repoDir)) {
+                        bat "rmdir /s /q ${repoDir}"  // Windows command to delete folder
+                    }
+                }
+                
+                
+                withCredentials([usernamePassword(credentialsId: 'github-credentials', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
+                    // bat 'git clone https://%GIT_USERNAME%:%GIT_PASSWORD%@github.com/ShopOnlineNewYork/SonnyNY.git'
+                    bat 'git clone https://%GIT_USERNAME%:%GIT_PASSWORD%@github.com/ManojDekhane/7C_Healthineers.git'
+                }
+            }
+        }
+        stage ("Building docker images")
+        {
+            steps {
+                bat 'echo "Testing Docker Access"'
+                bat 'docker --version'
+                bat 'docker images'
+                dir('7C_Healthineers') {
+                    bat 'docker build -t manojdekhane/sonny_frontend_docker_app:latest .'
+                }
+                //  bat "docker build -t manojdekhane/sonny_frontend_docker_app:latest ."
+            }
+        }
+        stage ("Docker Login") 
+        {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                    bat "docker logout"
+                    bat "echo %DOCKER_PASSWORD% | docker login -u %DOCKER_USERNAME% --password-stdin"
+                }
+            }
+        }
+        stage ("Push images to Docker Hub")
+        {
+            steps {
+                bat "docker push manojdekhane/sonny_frontend_docker_app:latest"
+            }
+        }
+    }
+} 
