@@ -47,13 +47,15 @@ const Navbar = () => {
           </div>
           <div className="flex items-center space-x-2">
             <FaPhone className="animate-pulse transform scale-x-[-1]" />
-            <span>+91 8484845154</span>
+            <a href="tel:+918484845154" className="hover:text-white hover:font-semibold transition duration-300">
+              +91 8484845154
+            </a>
           </div>
           <div className="flex items-center space-x-2">
             <HiOutlineMail className="animate-spin-slow text-xl" />
             <a
               href="mailto:KmKazi@7chealthineers.com"
-              className="hover:underline hover:font-semibold"
+              className="hover:font-semibold"
             >
               KmKazi@7chealthineers.com
             </a>
@@ -79,8 +81,8 @@ const Navbar = () => {
               <li><Link to="/" className="hover:text-sky-600 transition-colors">Home</Link></li>
               <li><Link to="/profile" className="hover:text-sky-600 transition-colors">Profile</Link></li>
               <li><Link to="/product-category" className="hover:text-sky-600 transition-colors">Products</Link></li>
-              <li><Link to="/" className="hover:text-sky-600 transition-colors">Gallery</Link></li>
-              <li><Link to="/" className="hover:text-sky-600 transition-colors">Contact</Link></li>
+              <li><Link to="/gallery" className="hover:text-sky-600 transition-colors">Gallery</Link></li>
+              <li><Link to="/contact-us" className="hover:text-sky-600 transition-colors">Contact</Link></li>
             </ul>
 
             {/* Mobile Menu Button */}
@@ -137,7 +139,7 @@ const Navbar = () => {
               </li>
               <li className="group">
                 <Link
-                  to="/"
+                  to="/gallery"
                   onClick={() => setIsOpen(false)}
                   className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
                 >
@@ -147,7 +149,7 @@ const Navbar = () => {
               </li>
               <li className="group">
                 <Link
-                  to="/"
+                  to="/contact-us"
                   onClick={() => setIsOpen(false)}
                   className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
                 >

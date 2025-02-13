@@ -1,7 +1,6 @@
 import Pathology from "../src/assets/product-category-images/Pathology.jpg";
 import CriticalCare from "../src/assets/product-category-images/criticalcare.jpg";
 import radiology from "../src/assets/product-category-images/Radiology.png";
-// import radiology from "/Users/manoj/OneDrive/Desktop/Important/Projects/FreelanceProject/frontend/src/assets/product-category-images/Radiology.png"
 
 //MRI products
 import Magnifico_Open from "../src/assets/MRI-images/MRI/Magnifico_Open.webp";
@@ -37,6 +36,7 @@ import Sysmex_xp300_PDF from "./assets/Pathology-Machine-Brochures/sysmex xp300 
 //  SubCategory Images
 import mri from "../src/assets/images/mri.webp";
 import ultrasound from "../src/assets/images/Ultrasound.jpg";
+import pathology_consumables from "../src/assets/Subcategory-images/Pathology_consumables.jpg";
 
 const productData = [
     {
@@ -256,28 +256,29 @@ const productData = [
         subCategories: [
             {
                 "name": "Pathology Consumable(Reagents)",
+                "image": pathology_consumables,
                 "products": [
                     {
                         "name": "Diluent-S[20L]",
-                        "image": "/images/diluent-s.jpg",
+                        "image": "",
                         "description": "A high-quality diluent solution for laboratory use, ensuring accurate and reliable results.",
                         "price": "3000",
                     },
                     {
                         "name": "Lyse-S[500ml]",
-                        "image": "/images/lyse-s.jpg",
+                        "image": "",
                         "description": "An advanced lysis solution designed for optimal sample preparation and cell analysis.",
                         "price": 3000,
                     },
                     {
                         "name": "S-Clean[100ml]",
-                        "image": "/images/s-clean.jpg",
+                        "image": "",
                         "description": "A powerful cleaning solution for maintaining laboratory equipment and ensuring contamination-free testing.",
                         "price": 5000,
                     },
                     {
                         "name": "LytePack[800ml]",
-                        "image": "/images/lytepack.jpg",
+                        "image": "",
                         "description": "A specialized reagent pack formulated for precise electrolyte analysis in clinical diagnostics.",
                         "price": 12000,
                     }
@@ -285,6 +286,7 @@ const productData = [
             },
             {
                 name: "Pathology Machines",
+                image: Smart_7_Advance,
                 products: [
                     {
                         "name": "XP300",

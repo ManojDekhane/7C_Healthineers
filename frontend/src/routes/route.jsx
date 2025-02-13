@@ -7,6 +7,7 @@ import Layout from "../routes/Layout";
 import LandingPage from "../pages/Buyer/LandingPage/LandingPage";
 import ContactUs from "../pages/Buyer/ContactUs/ContactUs";
 import ProfilePage from "../pages/Buyer/Profile/ProfilePage";
+import Gallery from "../pages/Buyer/Gallery/Gallery";
 
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
@@ -28,6 +29,7 @@ const RoutesComponent = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/product-category" element={<ProductCategoryPage />} />
         <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />
         <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />

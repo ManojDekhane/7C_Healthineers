@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -6,6 +7,10 @@ const ContactUs = () => {
         userEmail: "",
         message: ""
     });
+
+    const location = useLocation();
+
+    const marginTopClass = location.pathname === "/contact-us" ? "mt-44" : "mt-10";
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -44,7 +49,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
+        <div className={`max-w-md mx-auto p-6 bg-white shadow-md rounded-lg ${marginTopClass}`}>
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <input

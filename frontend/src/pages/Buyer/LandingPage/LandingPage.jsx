@@ -2,9 +2,9 @@ import React from "react";
 import ContactUs from "../ContactUs/ContactUs";
 import ProductCard from "../../../components/ProductCard/ProductCard";
 import { Link } from "react-router-dom";
-import s_scan_open  from "../../../assets/LandingPageProduct/s-scan_open.webp";
+import s_scan_open from "../../../assets/LandingPageProduct/s-scan_open.webp";
 import MyLab_A50 from "../../../assets/LandingPageProduct/MyLab-A50.webp";
-import g_scan_brio  from "../../../assets/LandingPageProduct/g-scan-brio.webp";
+import g_scan_brio from "../../../assets/LandingPageProduct/g-scan-brio.webp";
 import FeedbackSection from "../FeedbackSection/FeedbackSection";
 
 
@@ -50,9 +50,12 @@ const LandingPage = () => {
           <div className="mt-6 flex justify-center space-x-6">
             <button className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:bg-black hover:scale-105">
               <Link to="/product-category">VIEW PRODUCTS</Link>
-              
+
             </button>
-            <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:bg-sky-600 hover:scale-105">
+            <button
+              className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:bg-black hover:scale-105"
+              onClick={() => window.open("https://wa.me/918637723379?text=Hello, I would like to inquire about your products.", "_blank")}
+            >
               SEND ENQUIRY
             </button>
           </div>
@@ -60,20 +63,33 @@ const LandingPage = () => {
 
       </div>
 
+
       {/* Products Section */}
-      <div className="bg-gray-100 py-20 mt-10 text-center">
-        <h1 className="text-4xl font-bold mb-12 text-gray-800">Our Products</h1>
+      <div className="bg-gradient-to-b from-gray-50 to-gray-200 py-20 mt-10 text-center">
+        <h1 className="text-4xl font-bold mb-12 text-gray-900 tracking-wide">
+          Our Products
+        </h1>
+
         <div className="flex flex-wrap justify-center gap-8 px-6">
           {products.map((product, index) => (
-            <ProductCard key={index} {...product} />
+            <div
+              key={index}
+              className="transition-transform duration-300 hover:scale-105"
+            >
+              <ProductCard {...product} />
+            </div>
           ))}
         </div>
-        <div className="mt-10">
-          <button className="bg-sky-600 hover:bg-black text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:scale-105">
-            <Link to="/product-category">VIEW ALL PRODUCTS</Link>
-          </button>
+
+        <div className="mt-12">
+          <Link to="/product-category">
+            <button className="bg-sky-600 hover:bg-sky-900 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:scale-105">
+              VIEW ALL PRODUCTS
+            </button>
+          </Link>
         </div>
       </div>
+
 
       {/* About Section */}
       <div className="py-20 px-10 text-center bg-white">
