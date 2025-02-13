@@ -1,6 +1,7 @@
 import Pathology from "../src/assets/product-category-images/Pathology.jpg";
 import CriticalCare from "../src/assets/product-category-images/criticalcare.jpg";
-import radiology from "../src/assets/product-category-images/radiology.png";
+import radiology from "../src/assets/product-category-images/Radiology.png";
+// import radiology from "/Users/manoj/OneDrive/Desktop/Important/Projects/FreelanceProject/frontend/src/assets/product-category-images/Radiology.png"
 
 //MRI products
 import Magnifico_Open from "../src/assets/MRI-images/MRI/Magnifico_Open.webp";
