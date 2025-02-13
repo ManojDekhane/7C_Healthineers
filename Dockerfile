@@ -8,8 +8,6 @@ RUN npm install
 
 # Copy the rest of the frontend files and build
 COPY frontend/ ./
-# Copy static assets explicitly
-COPY frontend/src/assets /app/frontend/src/assets
 RUN npm run build
 
 # Stage 2: Setup and run the backend
