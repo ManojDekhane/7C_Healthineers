@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfilePage = () => {
   return (
-    <div className="container mx-auto mt-32 p-6 text-gray-800">
+    <div className="container mx-auto mt-40 p-12 mb-10 text-gray-800">
       {/* Profile Section */}
       <h1 className="text-3xl font-bold text-blue-700 mb-4">Profile</h1>
      

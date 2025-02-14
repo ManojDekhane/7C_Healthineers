@@ -34,7 +34,7 @@ const Carousel = () => {
           <div key={index} className="w-full flex-shrink-0">
             <img
               src={image}
-              className="w-full max-h-[500px] rounded-lg object-contain"
+              className="w-full max-h-[370px] rounded-lg object-contain"
               alt={`Slide ${index + 1}`}
             />
           </div>
