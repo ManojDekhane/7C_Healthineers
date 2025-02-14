@@ -6,5 +6,8 @@ export default defineConfig({
   server: {
     allowedHosts: "all"
   },
+  build: {
+    outDir: "dist"
+  },
   plugins: [react()],
 })
