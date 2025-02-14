@@ -23,7 +23,8 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/request-demo", {
+            // const response = await fetch("http://localhost:5000/api/request-demo", {
+            const response = await fetch("https://6d5b-49-15-247-72.ngrok-free.app/api/request-demo", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ type: "demo", ...formData }),
