@@ -79,14 +79,7 @@ const LandingPage = () => {
         </h1>
 
         <div className="flex flex-wrap justify-center gap-8 px-6">
-          {products.map((product, index) => (
-            <div
-              key={index}
-              className="transition-transform duration-300 hover:scale-105"
-            >
-              <ProductCard {...product} />
-            </div>
-          ))}
+          <Carousel />
         </div>
 
         <div className="mt-12">
@@ -95,10 +88,10 @@ const LandingPage = () => {
               VIEW ALL PRODUCTS
             </button>
           </Link>
-
         </div>
       </div>
-    
+
+
 
 
 
