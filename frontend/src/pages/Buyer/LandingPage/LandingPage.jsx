@@ -47,7 +47,7 @@ const LandingPage = () => {
         }}
       >
         {/* Overlay Card */}
-        <div className="mt-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-10 shadow-2xl rounded-2xl text-center max-w-3xl z-10">
+        <div className="mt-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 shadow-2xl rounded-2xl text-center max-w-3xl z-10">
           <h1 className="text-4xl font-extrabold text-sky-600">Seven C Healthineers LLP</h1>
           <p className="text-gray-700 mt-4 text-lg">
             "Right Here, You Have An Option" Welcome to our "Seven C Healthineers LLP" company! We provide cutting-edge solutions for the healthcare industry.
@@ -73,7 +73,7 @@ const LandingPage = () => {
 
       {/* Products Section */}
 
-      <div className="bg-gradient-to-b from-gray-50 to-gray-200 py-20 mt-10 text-center">
+      <div className="bg-gradient-to-b from-gray-50 to-gray-200 py-20 mt-20 text-center">
         <h1 className="text-4xl font-bold mb-12 text-gray-900 tracking-wide">
           Our Products
         </h1>

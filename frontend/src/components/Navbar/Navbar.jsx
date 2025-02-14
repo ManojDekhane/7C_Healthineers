@@ -74,7 +74,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav className="bg-white shadow-md fixed top-[32px] left-0 w-full z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1">
           {/* Logo Section */}
           <div className="flex flex-wrap items-center space-x-2 md:space-x-4 text-center md:text-left">
             <img src={newlogo} alt="Logo" className="h-20 md:h-28 w-auto object-contain" />
@@ -114,62 +114,10 @@ const Navbar = () => {
       {isOpen && (
         <div
           ref={menuRef}
-          className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40 flex justify-center items-start pt-[80px]"
+          className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40 flex justify-center items-start pt-[120px]"
         >
 
-          <div className="w-full bg-white bg-opacity-90 shadow-md p-6 text-center">
-            <ul className="flex flex-col space-y-6 text-lg">
-              <li className="group">
-                <Link
-                  to="/"
-                  onClick={() => setIsOpen(false)}
-                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
-                >
-                  Home
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              </li>
-              <li className="group">
-                <Link
-                  to="/profile"
-                  onClick={() => setIsOpen(false)}
-                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
-                >
-                  Profile
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              </li>
-              <li className="group">
-                <Link
-                  to="/product-category"
-                  onClick={() => setIsOpen(false)}
-                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
-                >
-                  Products
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              </li>
-              <li className="group">
-                <Link
-                  to="/gallery"
-                  onClick={() => setIsOpen(false)}
-                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
-                >
-                  Gallery
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              </li>
-              <li className="group">
-                <Link
-                  to="/contact-us"
-                  onClick={() => setIsOpen(false)}
-                  className="relative transition-all duration-300 ease-in-out group-hover:text-sky-600 group-hover:scale-105 group-hover:font-bold"
-                >
-                  Contact
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              </li>
-            </ul>
+       
 
             <div className="w-4/5 max-w-sm bg-white shadow-lg p-5 rounded-md">
               <ul className="flex flex-col space-y-4 text-lg">
@@ -177,11 +125,11 @@ const Navbar = () => {
                 <li><Link to="/profile" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Profile</Link></li>
                 <li><Link to="/product-category" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Products</Link></li>
                 <li><Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Gallery</Link></li>
-                <li><Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Contact</Link></li>
+                <li><Link to="/contact-us" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Contact</Link></li>
               </ul>
             </div>
           </div>
-        </div>
+        
       )}
     </div>
   )
