@@ -86,14 +86,14 @@ const Navbar = () => {
             </div>
           </div>
 
-            {/* Desktop Menu */}
-            <ul className="hidden md:flex items-center gap-x-8 text-black font-medium">
-              <li><Link to="/" className="hover:text-sky-600 transition-colors">Home</Link></li>
-              <li><Link to="/profile" className="hover:text-sky-600 transition-colors">Profile</Link></li>
-              <li><Link to="/product-category" className="hover:text-sky-600 transition-colors">Products</Link></li>
-              <li><Link to="/gallery" className="hover:text-sky-600 transition-colors">Gallery</Link></li>
-              <li><Link to="/contact-us" className="hover:text-sky-600 transition-colors">Contact</Link></li>
-            </ul>
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center gap-x-8 text-black font-medium">
+            <li><Link to="/" className="hover:text-sky-600 transition-colors">Home</Link></li>
+            <li><Link to="/profile" className="hover:text-sky-600 transition-colors">Profile</Link></li>
+            <li><Link to="/product-category" className="hover:text-sky-600 transition-colors">Products</Link></li>
+            <li><Link to="/gallery" className="hover:text-sky-600 transition-colors">Gallery</Link></li>
+            <li><Link to="/contact-us" className="hover:text-sky-600 transition-colors">Contact</Link></li>
+          </ul>
 
 
           {/* Mobile Menu Button */}
@@ -169,21 +169,22 @@ const Navbar = () => {
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-600 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
-
-          <div className="w-4/5 max-w-sm bg-white shadow-lg p-5 rounded-md">
-            <ul className="flex flex-col space-y-4 text-lg">
-              <li><Link to="/" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Home</Link></li>
-              <li><Link to="/profile" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Profile</Link></li>
-              <li><Link to="/product-category" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Products</Link></li>
-              <li><Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Gallery</Link></li>
-              <li><Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Contact</Link></li>
-
             </ul>
+
+            <div className="w-4/5 max-w-sm bg-white shadow-lg p-5 rounded-md">
+              <ul className="flex flex-col space-y-4 text-lg">
+                <li><Link to="/" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Home</Link></li>
+                <li><Link to="/profile" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Profile</Link></li>
+                <li><Link to="/product-category" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Products</Link></li>
+                <li><Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Gallery</Link></li>
+                <li><Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-sky-600">Contact</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
       )}
     </div>
-  );
+  )
 };
 
 export default Navbar;
