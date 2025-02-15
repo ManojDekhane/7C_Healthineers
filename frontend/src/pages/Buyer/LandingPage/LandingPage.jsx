@@ -50,7 +50,7 @@ const LandingPage = () => {
 
         {/* Overlay Card */}
        {/* Main Overlay Card */}
-       <div className="mt-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 shadow-2xl rounded-2xl text-center max-w-3xl z-10">
+       <div className="mt-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-3 shadow-2xl rounded-2xl text-center max-w-3xl z-10">
   {/* Title */}
   <h1 className="text-4xl font-extrabold text-sky-600">Seven C Healthineers LLP</h1>
 
