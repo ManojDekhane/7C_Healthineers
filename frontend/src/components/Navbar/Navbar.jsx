@@ -4,7 +4,7 @@ import { FaPhone, FaBars, FaTimes } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import newlogo from "../../assets/SevenC-logo/n.png";
-import esaoteLogo from "../../assets/SevenC-logo/esaotelogo.png";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,15 +76,13 @@ const Navbar = () => {
       <nav className="bg-white shadow-md fixed top-[32px] left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1">
           {/* Logo Section */}
-          <div className="flex flex-wrap items-center space-x-2 md:space-x-4 text-center md:text-left">
-            <img src={newlogo} alt="Logo" className="h-20 md:h-28 w-auto object-contain" />
-            <div className="flex flex-col items-center md:items-start">
-              <span className="text-gray-800 text-sm md:text-lg font-semibold">
-                Authorized Partner
-              </span>
-              <img src={esaoteLogo} alt="Esaote Logo" className="h-10 md:h-12 w-auto object-contain" />
-            </div>
-          </div>
+          <div className="flex flex-wrap items-center space-x-3 md:space-x-4 text-center md:text-left">
+  {/* Main Logo */}
+  <img src={newlogo} alt="Logo" className="h-16 md:h-24 lg:h-28 w-auto object-contain max-w-full" />
+
+  
+</div>
+
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-x-8 text-black font-medium">
