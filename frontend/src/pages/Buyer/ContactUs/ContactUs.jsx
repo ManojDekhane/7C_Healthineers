@@ -22,8 +22,7 @@ const ContactUs = () => {
         console.log("Sending data:", { type: "contact", ...formData });
 
         try {
-            // const response = await fetch("http://localhost:5000/api/contact", {
-            const response = await fetch("https://6d5b-49-15-247-72.ngrok-free.app/api/contact", {
+            const response = await fetch("http://localhost:5000/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

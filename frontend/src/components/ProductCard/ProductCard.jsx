@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ProductDemoRequest from "../ProductDemoRequest/ProductDemoRequest";
+import GetAQuote from "../GetAQuote/GetAQuote";
 
 const ProductCard = ({ image, name, category, subCategory, brochureLink, price }) => {
   const [isModalOpen, setModalOpen] = useState(false); // Fix: Define state for modal
@@ -40,17 +41,17 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
             Download Brochure
           </button>
 
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-1">
             <button
               className="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800"
               onClick={() => setModalOpen(true)} // Fix: Modal state handler
             >
-               Get a Quote
+              Get a Quote
             </button>
           </div>
 
-          {/* Product Demo Request Modal */}
-          <ProductDemoRequest isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+          {/* Get a quote */}
+          <GetAQuote isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
         </>
       ) : category === "Pathology" && subCategory === "Pathology Consumable(Reagents)" ? (
         <>
