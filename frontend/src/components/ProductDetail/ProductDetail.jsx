@@ -56,11 +56,17 @@ const ProductDetail = () => {
       </div>
 
       {/* Product Description */}
-      <div className="w-4/5 mx-auto bg-white/80 backdrop-blur-md shadow-lg border-l-8 border-sky-500 p-12 rounded-2xl mb-12 transition-transform transform hover:scale-105 duration-300">
-        <p className="text-xl font-medium text-gray-800 leading-relaxed text-center italic">
-          {product.description}
-        </p>
-      </div>
+      <div
+  className="w-4/5 sm:w-[95%] sm:ml-0 sm:mr-0 bg-white/80 backdrop-blur-md shadow-lg border-l-8 border-sky-500 
+             p-8 sm:p-4 rounded-2xl mb-12 transition-transform transform hover:scale-105 duration-300"
+>
+  <p className="text-lg sm:text-xl  font-medium text-gray-800 leading-relaxed text-center italic">
+    {product.description}
+  </p>
+</div>
+
+
+
 
       {/* Enhanced Features Section */}
       {product.features && product.features.length > 0 && (
