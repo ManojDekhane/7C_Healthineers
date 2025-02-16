@@ -101,9 +101,12 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
                     <div className="h-4"></div>
                 </div>
                 {/* Close button stays at the bottom */}
-                <button onClick={onClose} className="mt-4 block text-center text-red-500 hover:underline w-full">
-                    Close
-                </button>
+                <button 
+  onClick={onClose} 
+  className="mt-4 w-full px-6 py-3 bg-sky-600 text-white font-semibold rounded-md shadow-md hover:bg-sky-700 transition-all duration-300"
+>
+  Close
+</button>
             </div>
         </div>
 

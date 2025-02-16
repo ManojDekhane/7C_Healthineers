@@ -37,7 +37,8 @@ import Sysmex_xp300_PDF from "./assets/Pathology-Machine-Brochures/sysmex xp300 
 import mri from "../src/assets/images/mri.webp";
 import ultrasound from "../src/assets/images/Ultrasound.jpg";
 import pathology_consumables from "../src/assets/Subcategory-images/Pathology_consumables.jpg";
-
+//Crtical Care
+import et_1000 from "../src/assets/CriticalCare/ET-1000.webp";
 const productData = [
     {
         category: "Radiology and Diagnostic",
@@ -315,7 +316,34 @@ const productData = [
         category: "Critical Care",
         link: "/critical-care",
         image: CriticalCare,
-        subCategories: [],
+        subCategories: [
+            {
+                 name: "Respiratory Infection",
+                 image:"",
+                 products:[
+                    {
+                        "name": "ET-1000",
+                        "image":et_1000,
+                        "description":"EIT is a medical imaging technology that obtains impedance changes through corresponding imaging algorithm by giving low intensity current and measuring surface voltages through attaching electrodes around chest." ,
+                        features: [
+                            
+                            { title: "Continuously monitoring", description: "Monitoring changes in the condition and treatment effects throughout the process ensures continuous safety assurance." },
+                            { title: "Individualized respiratory management ", description: "Individualized and precise treatment can provide more direct and timely guidance for accelerating the recovery of patients. " },
+                            { title: "Easy to use ", description: "The belt is easy to position and operates with simplicity.Image acquisition is rapid and intuitive, facilitating clear and immediate interpretation by healthcare workers." },
+                            { title: "Radiation Free ", description: "Eliminates the risks associated with radiation, ensuring patient well-being with repeated use." }
+                        ]
+                       
+                    }
+                 ]
+            },
+            {
+                name:"Vantilator"
+                
+            },{
+                name:"Anasthesia"
+               
+            }
+        ],
     },
 ];
 
