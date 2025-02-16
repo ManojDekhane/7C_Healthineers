@@ -4,9 +4,7 @@ import productData from '../../../productData';
 const Gallery = () => {
     const images = productData.flatMap(category =>
         category.subCategories?.flatMap(sub =>
-            sub.products
-                .filter(product => product.image)
-                .map(product => product.image)
+            sub.products?.filter(product => product.image).map(product => product.image) || []
         ) || []
     );
 

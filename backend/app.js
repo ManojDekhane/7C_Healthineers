@@ -51,5 +51,32 @@ app.post("/api/request-demo", async (req, res) => {
     }
 });
 
+app.post("/api/get-quote", async (req, res) => {
+    try {
+        const { name, userEmail, phone, product, message } = req.body; // ✅ Changed productName -> product, comments -> message
+
+        if (!name || !userEmail || !phone || !product) {  // ✅ Changed productName -> product
+            return res.status(400).json({ success: false, message: "All fields are required except message." });
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(userEmail)) {
+            return res.status(400).json({ success: false, message: "Invalid email format" });
+        }
+
+        const result = await sendMail("quote", { name, userEmail, phone, product, message }); // ✅ Fix applied here
+        console.log("Mail function response:", result);
+
+        if (!result.success) {
+            return res.status(500).json({ success: false, message: "Failed to send email" });
+        }
+
+        res.status(200).json({ success: true, message: "Quote request submitted and email sent successfully!" });
+    } catch (error) {
+        console.error("Server Error:", error);
+        res.status(500).json({ success: false, message: "Internal Server Error" });
+    }
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

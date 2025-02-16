@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const ProductDemoRequest = ({ isOpen, onClose }) => {
+const GetAQuote = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
         name: "",
         userEmail: "",
         phone: "",
-        demoDateTime: "",
+        productName: "",
         comments: "",
     });
 
@@ -15,31 +15,39 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(formData.userEmail)) {
             alert("Please enter a valid email address.");
             return;
         }
-
+    
         try {
-            const response = await fetch("http://localhost:5000/api/request-demo", {
+            const response = await fetch("http://localhost:5000/api/get-quote", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ type: "demo", ...formData }),
+                body: JSON.stringify({ 
+                    type: "quote",
+                    name: formData.name,
+                    userEmail: formData.userEmail,
+                    phone: formData.phone,
+                    product: formData.productName,  // ✅ Fix: Sending product instead of productName
+                    message: formData.comments      // ✅ Fix: Sending message instead of comments
+                }),
             });
-
+    
             const data = await response.json();
             alert(data.message);
-
+    
             if (data.success) {
-                setFormData({ name: "", userEmail: "", phone: "", demoDateTime: "", comments: "" });
+                setFormData({ name: "", userEmail: "", phone: "", productName: "", comments: "" });
                 onClose();
             }
         } catch (error) {
-            console.error("Error submitting demo request:", error);
+            console.error("Error submitting quote request:", error);
         }
     };
+    
 
     if (!isOpen) return null;
 
@@ -48,7 +56,7 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
             <div className="bg-white p-6 rounded-xl shadow-2xl w-full max-w-md h-[72vh] flex flex-col">
                 {/* Scrollable container */}
                 <div className="overflow-y-auto flex-grow px-2" style={{ maxHeight: "70vh" }}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Request a Product Demo</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Request a Quote</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <input
                             type="text"
@@ -78,11 +86,12 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
                             onChange={handleChange}
                         />
                         <input
-                            type="datetime-local"
-                            name="demoDateTime"
+                            type="text"
+                            name="productName"
+                            placeholder="Product Name"
                             required
                             className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
-                            value={formData.demoDateTime}
+                            value={formData.productName}
                             onChange={handleChange}
                         />
                         <textarea
@@ -93,7 +102,7 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
                             onChange={handleChange}
                         ></textarea>
                         <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold transition hover:bg-blue-700">
-                            Submit Request
+                            Submit Quote Request
                         </button>
                     </form>
                     {/* Spacer for better scroll visibility */}
@@ -108,8 +117,7 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
                 </button>
             </div>
         </div>
-
     );
 };
 
-export default ProductDemoRequest;
+export default GetAQuote;

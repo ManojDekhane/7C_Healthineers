@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-const sendMail = async(type, data) => {
+const sendMail = async (type, data) => {
     let mailOptions;
 
     if (type === "contact") {
@@ -34,16 +34,29 @@ const sendMail = async(type, data) => {
                 Preferred Demo Date & Time: ${demoDateTime}
                 Additional Comments: ${comments || "No comments provided."}`,
         };
+    } else if (type === "quote") {
+        const { name, userEmail, phone, productName, message } = data;
+        mailOptions = {
+            from: `"Quote Request" <${process.env.EMAIL_USER}>`,
+            to: process.env.RECEIVER_EMAIL,
+            replyTo: userEmail,
+            subject: `New Quote Request from ${name}`,
+            text: `Name: ${name}
+                Email: ${userEmail}
+                Phone: ${phone}
+                Interested Product: ${productName}
+                Additional Message: ${message || "No additional message provided."}`,
+        };
     } else {
         return { success: false, message: "Invalid email type." };
     }
 
     try {
         await transporter.sendMail(mailOptions);
-        return { success: true, message: `${type === "contact" ? "Contact" : "Demo request"} email sent successfully!`}
+        return { success: true, message: `${type === "contact" ? "Contact" : "Demo request"} email sent successfully!` }
     } catch (error) {
         console.error("Error sending email: ", error);
-        return { success: false, message: `Failed to send ${type} email.`};
+        return { success: false, message: `Failed to send ${type} email.` };
     }
 }
 
