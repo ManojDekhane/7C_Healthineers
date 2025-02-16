@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaPhone, FaBars, FaTimes } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
-import newlogo from "../../assets/SevenC-logo/n.png";
+import newlogo from "../../assets/SevenC-logo/logo.png";
 
 
 const Navbar = () => {
