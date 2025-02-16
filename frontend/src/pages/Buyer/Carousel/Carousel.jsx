@@ -3,26 +3,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/autoplay"; // ✅ Import autoplay styles
-import { Pagination, EffectCoverflow, Autoplay } from "swiper/modules"; // ❌ Removed Navigation module
+import "swiper/css/autoplay";
+import { Pagination, EffectCoverflow, Autoplay } from "swiper/modules"; 
 
 // Import Images
 import slide_image_1 from "../../../assets/MRI-images/MRI/esaote-s-scan.webp";
 import slide_image_2 from "../../../assets/MRI-images/MRI/g-scan-brio.webp";
 import slide_image_3 from "../../../assets/Ultrasound/Ultrasound/mylab-x5.webp";
 import slide_image_4 from "../../../assets/MRI-images/MRI/o-scan.webp";
-import slide_image_5 from "../../../assets/PathologyMachines/Smart-7-Advance.png";
-import slide_image_6 from "../../../assets/Ultrasound/Ultrasound/MyLab-A50.webp";
-import slide_image_7 from "../../../assets/PathologyMachines/Xp-300png.png";
 
-const images = [
-  slide_image_1,
-  slide_image_2,
-  slide_image_3,
-  slide_image_4,
-  slide_image_5,
-  slide_image_6,
-  slide_image_7,
+import slide_image_5 from "../../../assets/Ultrasound/Ultrasound/MyLab-A50.webp";
+import slide_image_6 from "../../../assets/Ultrasound/Ultrasound/mylab-x7.webp";
+
+// Product data with image and link
+const products = [
+  { image: slide_image_1, name: "S-Scan" },
+  { image: slide_image_2, name: "G-Scan%20Brio" },
+  { image: slide_image_3, name: "MyLab™X5" },
+  { image: slide_image_4, name: "O-Scan" },
+  { image: slide_image_5, name: "MyLab™A50" },
+  { image: slide_image_6, name: "MyLab™X7" },
 ];
 
 const Carousel = () => {
@@ -52,18 +52,25 @@ const Carousel = () => {
           slideShadows: false,
         }}
         pagination={{ clickable: true }}
-        modules={[EffectCoverflow, Pagination, Autoplay]} // ❌ Removed Navigation module
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="w-full max-w-screen-xl"
       >
-        {images.map((img, index) => (
-          <SwiperSlide key={index} className="flex justify-center">
-            <img
-              src={img}
-              alt={`slide_image_${index}`}
-              className="w-auto max-h-[600px] object-contain rounded-xl shadow-md"
-            />
-          </SwiperSlide>
-        ))}
+        {products.map((product, index) => {
+          // Encode the product name for URL
+          const encodedProductName = encodeURIComponent(product.name.toLowerCase());
+
+          return (
+            <SwiperSlide key={index} className="flex justify-center">
+              <a href={`/product/${encodedProductName}`}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-auto max-h-[600px] object-contain rounded-xl shadow-md"
+                />
+              </a>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );
