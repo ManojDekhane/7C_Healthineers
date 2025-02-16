@@ -29,7 +29,7 @@ const LandingPage = () => {
           {/* Title */}
           <h1 className="text-4xl font-extrabold text-sky-600">Seven C Healthineers LLP</h1>
 
-          <p className="text-gray-700 mt-4 text-base sm:text-lg leading-relaxed max-w-3xl px-4 sm:px-0 text-center sm:text-left">
+          <p className="text-gray-700 mt-4 text-base sm:text-lg leading-relaxed max-w-3xl px-4 sm:px-0 text-center mx-auto">
             Welcome to <span className="font-semibold text-sky-600">Seven C Healthineers LLP</span>!
             We are dedicated to delivering high-quality <span className="text-sky-700 font-medium">medical equipment </span>
             to healthcare professionals and institutions, ensuring <span className="font-semibold">reliability, efficiency & innovation</span> in the medical field.
