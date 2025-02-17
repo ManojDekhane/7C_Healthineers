@@ -27,7 +27,7 @@ const products = [
 
 const Carousel = () => {
   return (
-    <div className="flex justify-center items-center bg-gray-100 py-10 w-full">
+    <div className="flex justify-center items-center bg-gray-100 py-10 w-full mt-32">
       <Swiper
         effect="coverflow"
         grabCursor={true}

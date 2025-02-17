@@ -12,8 +12,6 @@ import FeedbackSection from "../FeedbackSection/FeedbackSection";
 const LandingPage = () => {
   return (
     <>
-
-
       {/* Full Page Background Image */}
       <div
         className="w-full min-h-screen bg-cover bg-center flex justify-center items-center   relative top-20"
