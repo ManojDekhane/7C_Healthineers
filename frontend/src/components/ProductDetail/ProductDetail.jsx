@@ -56,6 +56,7 @@ const ProductDetail = () => {
       </div>
 
       {/* Product Description */}
+
       <div className="w-full sm:w-4/5 mx-auto bg-white/80 backdrop-blur-md shadow-lg border-l-8 border-sky-500 p-6 sm:p-12 rounded-2xl mb-8 sm:mb-12">
         <p className="text-xl font-medium text-gray-800 leading-relaxed text-center italic">
           {product.description}

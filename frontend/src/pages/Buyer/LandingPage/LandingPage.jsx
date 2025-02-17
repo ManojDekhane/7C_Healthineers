@@ -13,6 +13,7 @@ const LandingPage = () => {
   return (
     <>
 
+
       {/* Full Page Background Image */}
       <div
         className="w-full min-h-screen bg-cover bg-center flex justify-center items-center   relative top-20"
@@ -81,6 +82,13 @@ const LandingPage = () => {
                   src="https://orbitdiagnostics.net/wp-content/uploads/brizy/imgs/Orbit_Logo-456x286x0x0x456x286x1722609305.png"
                   alt="Orbit Logo"
                   className="h-8 sm:h-8 md:h-8 w-auto object-contain max-w-full"
+                />
+              </a>
+              <a href="https://www.globalmedicaresystems.com/" target="_blank">
+                <img
+                  src="https://5.imimg.com/data5/SELLER/Logo/2021/11/CL/JR/WD/3049048/global-logo-new-90x90.png"
+                  alt="Orbit Logo"
+                  className="h-7 sm:h-7 md:h-7 w-auto object-contain max-w-full"
                 />
               </a>
 

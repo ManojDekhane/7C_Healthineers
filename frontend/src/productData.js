@@ -43,7 +43,7 @@ const productData = [
     {
         category: "Radiology and Diagnostic",
         link: "/radiology",
-        image: radiology,
+        image: g_scan_brio,
         subCategories: [
             {
                 name: "MRI Versions",
