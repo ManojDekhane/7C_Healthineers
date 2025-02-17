@@ -19,22 +19,17 @@ const Footer = () => {
 
           {/* Sister Companies */}
           <div>
-            <h3 className="text-2xl font-bold">Sister Companies</h3>
-            <ul className="mb-4 mt-2 text-base font-semibold space-y-2">
-              <li>Soha Biomedical Engineers</li>
-              <li>Soha Enterprises</li>
-              <li>Soha Biomedical Technology</li>
-            </ul>
-          </div>
-
-          {/* Opening Hours */}
-          <div>
-            <h3 className="text-2xl font-bold">Opening Hours</h3>
+          <h3 className="text-2xl font-bold">Opening Hours</h3>
             <ul className="mt-4 text-gray-300 space-y-2">
               <li><strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM</li>
               <li><strong>Saturday:</strong> 10:00 AM - 5:00 PM</li>
               <li><strong>Sunday:</strong> Closed</li>
             </ul>
+          </div>
+
+          {/* Opening Hours */}
+          <div>
+          
           </div>
 
           {/* Contact Information + Social Media */}
