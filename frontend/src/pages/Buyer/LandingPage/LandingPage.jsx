@@ -13,6 +13,7 @@ const LandingPage = () => {
   return (
     <>
 
+
       {/* Full Page Background Image */}
       <div
         className="w-full min-h-screen bg-cover bg-center flex justify-center items-center   relative top-20"
@@ -29,7 +30,7 @@ const LandingPage = () => {
           {/* Title */}
           <h1 className="text-4xl font-extrabold text-sky-600">Seven C Healthineers LLP</h1>
 
-          <p className="text-gray-700 mt-4 text-base sm:text-lg leading-relaxed max-w-3xl px-4 sm:px-0 text-center sm:text-left">
+          <p className="text-gray-700 mt-4 text-base sm:text-lg leading-relaxed max-w-3xl px-4 sm:px-0 text-center mx-auto">
             Welcome to <span className="font-semibold text-sky-600">Seven C Healthineers LLP</span>!
             We are dedicated to delivering high-quality <span className="text-sky-700 font-medium">medical equipment </span>
             to healthcare professionals and institutions, ensuring <span className="font-semibold">reliability, efficiency & innovation</span> in the medical field.
@@ -81,6 +82,13 @@ const LandingPage = () => {
                   src="https://orbitdiagnostics.net/wp-content/uploads/brizy/imgs/Orbit_Logo-456x286x0x0x456x286x1722609305.png"
                   alt="Orbit Logo"
                   className="h-8 sm:h-8 md:h-8 w-auto object-contain max-w-full"
+                />
+              </a>
+              <a href="https://www.globalmedicaresystems.com/" target="_blank">
+                <img
+                  src="https://5.imimg.com/data5/SELLER/Logo/2021/11/CL/JR/WD/3049048/global-logo-new-90x90.png"
+                  alt="Orbit Logo"
+                  className="h-7 sm:h-7 md:h-7 w-auto object-contain max-w-full"
                 />
               </a>
 

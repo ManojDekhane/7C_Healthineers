@@ -48,7 +48,7 @@ const FeedbackSection = () => {
               className="w-full p-3 border rounded-md focus:ring focus:ring-blue-300"
               required
             ></textarea>
-            <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+            <button type="submit" className="w-full bg-sky-600 text-white py-2 rounded-md hover:bg-blue-700">
               Submit
             </button>
           </form>

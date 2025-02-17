@@ -13,7 +13,7 @@ const ProductCategoryCard = ({ link, image, title }) => {
 
         {/* Title Section with Fixed Height */}
         <div className="flex-grow flex items-center justify-center p-4 bg-white h-24 rounded-b-lg shadow-inner">
-          <p className="text-lg md:text-xl text-gray-900 font-semibold text-center leading-tight">
+          <p className="text-lg md:text-xl text-gray-900 font-bold text-center leading-tight">
             {title}
           </p>
         </div>

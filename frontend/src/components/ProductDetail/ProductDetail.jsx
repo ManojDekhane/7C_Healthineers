@@ -44,35 +44,30 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 px-6 py-12 pt-40">
       {/* Product Name */}
-      <h2 className="text-5xl font-extrabold text-center text-sky-700 mb-7 drop-shadow-md">{product.name}</h2>
+      <h2 className="text-3xl sm:text-5xl font-extrabold text-center text-sky-700 mb-5 sm:mb-7 drop-shadow-md">{product.name}</h2>
 
       {/* Product Image */}
       <div className="flex justify-center mb-14 mt-10">
         <img
           src={product.image}
           alt={product.name}
-          className="w-80 h-80 object-contain shadow-2xl rounded-2xl transition-transform transform hover:scale-110"
+          className="w-64 h-64 sm:w-80 sm:h-80 object-contain shadow-2xl rounded-2xl transition-transform transform hover:scale-110"
         />
       </div>
 
       {/* Product Description */}
-      <div
-  className="w-4/5 sm:w-[95%] sm:ml-0 sm:mr-0 bg-white/80 backdrop-blur-md shadow-lg border-l-8 border-sky-500 
-             p-8 sm:p-4 rounded-2xl mb-12 transition-transform transform hover:scale-105 duration-300"
->
-  <p className="text-lg sm:text-xl  font-medium text-gray-800 leading-relaxed text-center italic">
-    {product.description}
-  </p>
-</div>
 
-
-
+      <div className="w-full sm:w-4/5 mx-auto bg-white/80 backdrop-blur-md shadow-lg border-l-8 border-sky-500 p-6 sm:p-12 rounded-2xl mb-8 sm:mb-12">
+        <p className="text-xl font-medium text-gray-800 leading-relaxed text-center italic">
+          {product.description}
+        </p>
+      </div>
 
       {/* Enhanced Features Section */}
       {product.features && product.features.length > 0 && (
         <div className="mt-8 p-8 max-w-5xl mx-auto text-center">
           <h3 className="text-4xl font-bold text-sky-700 mb-8 drop-shadow-md"> Key Features</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {product.features.map((feature, index) => (
               <div
                 key={index}
@@ -89,10 +84,8 @@ const ProductDetail = () => {
       )}
 
       {/* Get Demo Button */}
-      {/* Get Demo Button */}
       <div className="flex justify-center mt-6">
-        <button
-          className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-3 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transform hover:scale-110 transition duration-300"
+        <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full shadow-lg hover:from-blue-600 hover:to-blue-800 transform hover:scale-105 transition duration-300"
           onClick={() => setModalOpen(true)}
         >
           🚀 Get a Demo
