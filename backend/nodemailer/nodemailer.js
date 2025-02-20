@@ -22,7 +22,7 @@ const sendMail = async (type, data) => {
             text: `Name: ${name}\nEmail: ${userEmail}\nMessage: ${message}`,
         };
     } else if (type === "demo") {
-        const { name, userEmail, phone, demoDateTime, comments } = data;
+        const { name, userEmail, phone, demoDateTime, comments, productName } = data;
         mailOptions = {
             from: `"Demo request" <${process.env.EMAIL_USER}>`,
             to: process.env.RECEIVER_EMAIL,
@@ -31,6 +31,7 @@ const sendMail = async (type, data) => {
             text: `Name: ${name}
                 Email: ${userEmail}
                 Phone: ${phone}
+                Product Requested: ${productName}
                 Preferred Demo Date & Time: ${demoDateTime}
                 Additional Comments: ${comments || "No comments provided."}`,
         };

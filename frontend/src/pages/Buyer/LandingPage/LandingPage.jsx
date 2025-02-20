@@ -12,8 +12,8 @@ import ProductNavbar from "../Products/ProductNavbar";
 const LandingPage = () => {
   return (
     <>
-<div className="mt-10">
-<ProductNavbar/></div>
+      <div className="mt-10">
+        <ProductNavbar /></div>
 
       {/* Full Page Background Image */}
       <div
@@ -45,7 +45,7 @@ const LandingPage = () => {
             </button>
             <button
               className="bg-sky-600 text-white px-8 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:bg-black hover:scale-105"
-              onClick={() => window.open("https://wa.me/918637723379?text=Hello, I would like to inquire about your products.", "_blank")}
+              onClick={() => window.open("https://wa.me/918484845154?text=Hello, I would like to inquire about your products.", "_blank")}
             >
               SEND ENQUIRY
             </button>

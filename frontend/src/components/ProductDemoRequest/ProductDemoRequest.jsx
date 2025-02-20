@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-const ProductDemoRequest = ({ isOpen, onClose }) => {
+const ProductDemoRequest = ({ isOpen, onClose, productName }) => {
     const [formData, setFormData] = useState({
         name: "",
         userEmail: "",
         phone: "",
         demoDateTime: "",
         comments: "",
+        productName: productName || "",
     });
 
     const handleChange = (e) => {
@@ -33,7 +34,7 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
             alert(data.message);
 
             if (data.success) {
-                setFormData({ name: "", userEmail: "", phone: "", demoDateTime: "", comments: "" });
+                setFormData({ name: "", userEmail: "", phone: "", demoDateTime: "", comments: "", productName: "" });
                 onClose();
             }
         } catch (error) {
@@ -48,7 +49,8 @@ const ProductDemoRequest = ({ isOpen, onClose }) => {
             <div className="bg-white p-6 rounded-xl shadow-2xl w-full max-w-md h-[72vh] flex flex-col">
                 {/* Scrollable container */}
                 <div className="overflow-y-auto flex-grow px-2" style={{ maxHeight: "70vh" }}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Request a Product Demo</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-2 text-center">Request a Product Demo</h2>
+                    <p className="text-lg font-medium text-center text-blue-600 mb-4">{productName}</p>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <input
                             type="text"

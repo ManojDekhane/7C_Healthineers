@@ -326,7 +326,6 @@ const productData = [
                         "image":et_1000,
                         "description":"EIT is a medical imaging technology that obtains impedance changes through corresponding imaging algorithm by giving low intensity current and measuring surface voltages through attaching electrodes around chest." ,
                         features: [
-                            
                             { title: "Continuously monitoring", description: "Monitoring changes in the condition and treatment effects throughout the process ensures continuous safety assurance." },
                             { title: "Individualized respiratory management ", description: "Individualized and precise treatment can provide more direct and timely guidance for accelerating the recovery of patients. " },
                             { title: "Easy to use ", description: "The belt is easy to position and operates with simplicity.Image acquisition is rapid and intuitive, facilitating clear and immediate interpretation by healthcare workers." },
@@ -338,12 +337,36 @@ const productData = [
             },
             {
                 name:"Vantilator",
-                image:"https://5.imimg.com/data5/SELLER/Default/2024/8/446189642/AJ/CM/VO/3049048/icu-ventilators-1000x1000.jpg"
-                
+                image:"https://5.imimg.com/data5/SELLER/Default/2024/8/446189642/AJ/CM/VO/3049048/icu-ventilators-1000x1000.jpg",
+                products:[
+                    {
+                        "name": "",
+                        "image": "",
+                        "description": "",
+                        features: [
+                            { title: "", description: "" },
+                            { title: "", description: "" },
+                            { title: "", description: "" },
+                            { title: "", description: "" },
+                        ]
+                    }
+                 ]
             },{
                 name:"Anasthesia",
-                image:"https://5.imimg.com/data5/SELLER/Default/2024/8/446202157/ZV/EU/TN/3049048/anaesthesia-workstation-machine-1000x1000.jpg"
-               
+                image:"https://5.imimg.com/data5/SELLER/Default/2024/8/446202157/ZV/EU/TN/3049048/anaesthesia-workstation-machine-1000x1000.jpg",
+                products:[
+                    {
+                        "name": "",
+                        "image": "",
+                        "description": "",
+                        features: [
+                            { title: "", description: "" },
+                            { title: "", description: "" },
+                            { title: "", description: "" },
+                            { title: "", description: "" },
+                        ]
+                    }
+                 ]
             }
         ],
     },
