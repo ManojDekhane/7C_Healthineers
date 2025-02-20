@@ -71,14 +71,14 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
           </button>
         </>
       ) : (
-        <>
+        
         <Link
           to={`/product/${encodeURIComponent(name)}`}
           className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800"
         >
           View More
         </Link>
-        </>
+        
       )}
     </div>
   );
