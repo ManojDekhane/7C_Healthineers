@@ -7,14 +7,16 @@ import Carousel from "../Carousel/Carousel";
 import Background from "../../../assets/LandingPageProduct/background.jpg";
 import about from "../../../assets/LandingPageProduct/about.webp"
 import FeedbackSection from "../FeedbackSection/FeedbackSection";
-
+import ProductNavbar from "../Products/ProductNavbar";
 
 const LandingPage = () => {
   return (
     <>
+<div className="mt-10">
+<ProductNavbar/></div>
       {/* Full Page Background Image */}
       <div
-        className="w-full min-h-screen bg-cover bg-center flex justify-center items-center   relative top-20"
+        className="w-full min-h-screen bg-cover bg-center flex justify-center items-center   relative top-0"
         style={{
           backgroundImage: `url(${Background})`,
           backgroundAttachment: "fixed",
@@ -101,7 +103,7 @@ const LandingPage = () => {
 
       {/* Products Section */}
 
-      <div className="bg-gradient-to-b from-gray-50 to-gray-200 py-20 mt-20 text-center">
+      <div className="bg-gradient-to-b from-gray-50 to-gray-200 py-20 mt-15 text-center">
         <h1 className="text-4xl font-bold mb-12 text-gray-900 tracking-wide">
           Our Products
         </h1>
