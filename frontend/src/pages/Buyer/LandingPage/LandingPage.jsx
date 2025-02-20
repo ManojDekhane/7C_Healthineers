@@ -15,7 +15,6 @@ const LandingPage = () => {
 <div className="mt-10">
 <ProductNavbar/></div>
 
-
       {/* Full Page Background Image */}
       <div
         className="w-full min-h-screen bg-cover bg-center flex justify-center items-center   relative top-0"
