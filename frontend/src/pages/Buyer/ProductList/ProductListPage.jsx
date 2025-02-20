@@ -14,11 +14,11 @@ const ProductListPage = () => {
         const subcategory = category.subCategories.find((sub) => sub.name === decodedSubcategoryName);
         if (subcategory) {
             selectedCategory = category.category;
-            selectedProducts = subcategory.products;
+            selectedProducts = subcategory.products || []; // ✅ Ensure it's always an array
         }
     });
 
-    if (selectedProducts.length === 0) {
+    if (!selectedProducts || selectedProducts.length === 0) { // ✅ Prevent undefined errors
         return (
             <div className="flex items-center justify-center h-[60vh]">
                 <h2 className="text-2xl font-bold text-gray-800">No Products Found</h2>
@@ -33,23 +33,20 @@ const ProductListPage = () => {
             </h1>
 
             <div className="flex justify-center">
-
-            {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12"> */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 justify-center">
-                {selectedProducts.map((product, index) => (
-                    <ProductCard 
-                    key={index} 
-                    image={product.image} 
-                    name={product.name} 
-                    category={selectedCategory}
-                    subCategory={decodedSubcategoryName}
-                    brochureLink={product.brochureLink || null}
-                    price={product.price}
-                    />
-                ))}
-            </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 justify-center">
+                    {selectedProducts.map((product, index) => (
+                        <ProductCard 
+                            key={index} 
+                            image={product.image} 
+                            name={product.name} 
+                            category={selectedCategory}
+                            subCategory={decodedSubcategoryName}
+                            brochureLink={product.brochureLink || null}
+                            price={product.price}
+                        />
+                    ))}
                 </div>
-
+            </div>
         </div>
     );
 };

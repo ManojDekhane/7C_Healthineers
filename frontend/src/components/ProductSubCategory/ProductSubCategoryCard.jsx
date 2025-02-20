@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 const ProductSubCategoryCard = ({ image, title }) => {
   return (
+   
     <div className="w-72 md:w-80 lg:w-96 h-80 flex flex-col cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 duration-300">
+     
       <Link to={`/subcategory/${encodeURIComponent(title)}`} className="block h-full">
         {/* Image with Overlay */}
         <div className="relative w-full h-56">

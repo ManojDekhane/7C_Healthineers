@@ -19,7 +19,7 @@ import ProductListPage from "../pages/Buyer/ProductList/ProductListPage";
 
 import AdminDashboard from "../pages/Seller/AdminDashboard/AdminDashboard";
 import ProductDetail from "../components/ProductDetail/ProductDetail"
-
+import ProductStatic from "../pages/Buyer/Product/ProductStatic";
 const RoutesComponent = () => {
   return (
     <Routes>
@@ -35,7 +35,7 @@ const RoutesComponent = () => {
         <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />
         <Route path="/product/:productName" element={<ProductDetail />} />
         <Route path="/profile" element={<ProfilePage />} />
-
+         <Route path="/ProductStatic" element={<ProductStatic/>}/>
       </Route>
 
       {/* Protected Admin Dashboard Route (without Layout) */}
