@@ -12,7 +12,7 @@ const Productcou = () => {
     <div className="mt-[calc(32px+64px)] lg:mt-[calc(32px+106px)] w-full bg-white py-4 shadow-sm flex justify-center items-center px-4">
       <div className="w-full max-w-7xl">
         {/* Scrollable container */}
-        <div className="mt-4 w-full justify-center overflow-x-auto whitespace-nowrap flex gap-4 lg:gap-8 snap-x snap-mandatory px-2 flex-nowrap">
+        <div className="mt-4 w-full justify-start overflow-x-auto whitespace-nowrap flex gap-4 lg:gap-12 snap-x snap-mandatory px-2 flex-nowrap">
           {productData.flatMap((category) =>
             category.subCategories?.map((sub, idx) => (
               <div
