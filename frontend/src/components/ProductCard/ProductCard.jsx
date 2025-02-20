@@ -20,12 +20,13 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
   };
 
   const handleBuyClick = (productName, price) => {
-    const phoneNumber = "918637723379"; // Replace with your organization's WhatsApp number (include country code)
+    const phoneNumber = "918484845154"; // Replace with your organization's WhatsApp number (include country code)
     const message = `Hello, I am interested in purchasing ${productName} for ₹${price} + GST. Can you provide more details?`;
     const encodedMessage = encodeURIComponent(message);
 
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   };
+  
 
   return (
     <div className="w-52 md:w-56 lg:w-60 bg-white border rounded-lg shadow-md p-3 flex flex-col items-center hover:shadow-lg transition-all duration-300">
@@ -46,14 +47,15 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
           <div className="flex justify-center mt-1">
             <button
               className="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800"
-              onClick={() => setModalOpen(true)} // Fix: Modal state handler
+              onClick={() => setModalOpen(true)} 
             >
               Get a Quote
             </button>
           </div>
 
           {/* Get a quote */}
-          <GetAQuote isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+          
+          <GetAQuote isOpen={isModalOpen} onClose={() => setModalOpen(false)} productName={name} />
         </>
       ) : category === "Pathology" && subCategory === "Pathology Consumable(Reagents)" ? (
         <>

@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const GetAQuote = ({ isOpen, onClose }) => {
+const GetAQuote = ({ isOpen, onClose, productName }) => {
     const [formData, setFormData] = useState({
         name: "",
         userEmail: "",
         phone: "",
-        productName: "",
         comments: "",
     });
+
+    
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -31,8 +33,8 @@ const GetAQuote = ({ isOpen, onClose }) => {
                     name: formData.name,
                     userEmail: formData.userEmail,
                     phone: formData.phone,
-                    product: formData.productName,  // ✅ Fix: Sending product instead of productName
-                    message: formData.comments      // ✅ Fix: Sending message instead of comments
+                    productName,  
+                    message: formData.comments     
                 }),
             });
     
@@ -40,7 +42,7 @@ const GetAQuote = ({ isOpen, onClose }) => {
             alert(data.message);
     
             if (data.success) {
-                setFormData({ name: "", userEmail: "", phone: "", productName: "", comments: "" });
+                setFormData({ name: "", userEmail: "", phone: "", comments: "" });
                 onClose();
             }
         } catch (error) {
@@ -56,7 +58,9 @@ const GetAQuote = ({ isOpen, onClose }) => {
             <div className="bg-white p-6 rounded-xl shadow-2xl w-full max-w-md h-[72vh] flex flex-col">
                 {/* Scrollable container */}
                 <div className="overflow-y-auto flex-grow px-2" style={{ maxHeight: "70vh" }}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Request a Quote</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-2 text-center">Request a Quote</h2>
+                    <p className="text-lg font-medium text-center text-blue-600 mb-4">{productName}</p>
+                    
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <input
                             type="text"
@@ -83,15 +87,6 @@ const GetAQuote = ({ isOpen, onClose }) => {
                             required
                             className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
                             value={formData.phone}
-                            onChange={handleChange}
-                        />
-                        <input
-                            type="text"
-                            name="productName"
-                            placeholder="Product Name"
-                            required
-                            className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
-                            value={formData.productName}
                             onChange={handleChange}
                         />
                         <textarea

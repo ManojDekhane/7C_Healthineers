@@ -43,7 +43,7 @@ const Carousel = () => {
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
-        spaceBetween={-20}
+        spaceBetween={20}
         coverflowEffect={{
           rotate: 0,
           stretch: -40,
@@ -75,6 +75,7 @@ const Carousel = () => {
             </SwiperSlide>
           );
         })}
+        <div className="swiper-pagination mt-10 !relative" />
       </Swiper>
     </div>
   );

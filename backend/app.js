@@ -24,9 +24,9 @@ app.post("/api/contact", async (req, res) => {
 
 app.post("/api/request-demo", async (req, res) => {
     try {
-        const { name, userEmail, phone, demoDateTime, comments } = req.body;
+        const { name, userEmail, phone, demoDateTime, comments, productName } = req.body;
 
-        if (!name || !userEmail || !phone || !demoDateTime) {
+        if (!name || !userEmail || !phone || !demoDateTime || !productName) {
             return res.status(400).json({ success: false, message: "All fields are required" });
         }
 
@@ -37,7 +37,7 @@ app.post("/api/request-demo", async (req, res) => {
         }
 
         // Send email
-        const result = await sendMail("demo", { name, userEmail, phone, demoDateTime, comments });
+        const result = await sendMail("demo", { name, userEmail, phone, demoDateTime, comments, productName });
         console.log("Mail function response:", result); // Debugging log
 
         if (!result.success) {
@@ -53,9 +53,10 @@ app.post("/api/request-demo", async (req, res) => {
 
 app.post("/api/get-quote", async (req, res) => {
     try {
-        const { name, userEmail, phone, product, message } = req.body; // ✅ Changed productName -> product, comments -> message
+        const { name, userEmail, phone, productName, message } = req.body; 
+        console.log("Data in sendMail:", req.body);
 
-        if (!name || !userEmail || !phone || !product) {  // ✅ Changed productName -> product
+        if (!name || !userEmail || !phone || !productName) {  
             return res.status(400).json({ success: false, message: "All fields are required except message." });
         }
 
@@ -64,7 +65,7 @@ app.post("/api/get-quote", async (req, res) => {
             return res.status(400).json({ success: false, message: "Invalid email format" });
         }
 
-        const result = await sendMail("quote", { name, userEmail, phone, product, message }); // ✅ Fix applied here
+        const result = await sendMail("quote", { name, userEmail, phone, productName, message }); 
         console.log("Mail function response:", result);
 
         if (!result.success) {

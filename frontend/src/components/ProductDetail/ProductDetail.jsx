@@ -40,6 +40,7 @@ const ProductDetail = () => {
       </div>
     );
   }
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 px-6 py-12 pt-40">
@@ -93,7 +94,8 @@ const ProductDetail = () => {
       </div>
 
       {/* Product Demo Request Modal */}
-      <ProductDemoRequest isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+      <ProductDemoRequest isOpen={isModalOpen} onClose={() => setModalOpen(false)} productName={productName} />
+      
 
     </div>
   );
