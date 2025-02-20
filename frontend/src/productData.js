@@ -319,7 +319,7 @@ const productData = [
         subCategories: [
             {
                  name: "Respiratory Infection",
-                 image:"",
+                 image:et_1000,
                  products:[
                     {
                         "name": "ET-1000",
@@ -337,10 +337,12 @@ const productData = [
                  ]
             },
             {
-                name:"Vantilator"
+                name:"Vantilator",
+                image:"https://5.imimg.com/data5/SELLER/Default/2024/8/446189642/AJ/CM/VO/3049048/icu-ventilators-1000x1000.jpg"
                 
             },{
-                name:"Anasthesia"
+                name:"Anasthesia",
+                image:"https://5.imimg.com/data5/SELLER/Default/2024/8/446202157/ZV/EU/TN/3049048/anaesthesia-workstation-machine-1000x1000.jpg"
                
             }
         ],
