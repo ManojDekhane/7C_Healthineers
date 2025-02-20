@@ -29,11 +29,14 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
 
   return (
     <div className="w-52 md:w-56 lg:w-60 bg-white border rounded-lg shadow-md p-3 flex flex-col items-center hover:shadow-lg transition-all duration-300">
-      <img src={image || defaultImage} alt={name} className="w-28 h-32 object-contain mb-2" />
-      <h3 className="text-md font-semibold text-center text-gray-800">{name}</h3>
+     {category !== "pathology" && subCategory !== "Pathology Consumable(Reagents)"&& (
+  <img src={image || defaultImage} alt={name} className=" w-28 h-32 object-contain mb-2" />
+)}
+      <h3 className="text-md font-bold text-center text-gray-800">{name}</h3>
 
       {category === "Pathology" && subCategory === "Pathology Machines" && brochureLink ? (
         <>
+       
           <button
             onClick={handleBrochureClick}
             className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800"
@@ -69,12 +72,14 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
           </button>
         </>
       ) : (
+        <>
         <Link
           to={`/product/${encodeURIComponent(name)}`}
           className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800"
         >
           View More
         </Link>
+        </>
       )}
     </div>
   );

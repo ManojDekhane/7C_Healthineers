@@ -11,7 +11,6 @@ import slide_image_1 from "../../../assets/MRI-images/MRI/esaote-s-scan.webp";
 import slide_image_2 from "../../../assets/MRI-images/MRI/g-scan-brio.webp";
 import slide_image_3 from "../../../assets/Ultrasound/Ultrasound/mylab-x5.webp";
 import slide_image_4 from "../../../assets/MRI-images/MRI/o-scan.webp";
-
 import slide_image_5 from "../../../assets/Ultrasound/Ultrasound/MyLab-A50.webp";
 import slide_image_6 from "../../../assets/Ultrasound/Ultrasound/mylab-x7.webp";
 
@@ -27,7 +26,7 @@ const products = [
 
 const Carousel = () => {
   return (
-    <div className="flex justify-center items-center bg-gray-100 py-10 w-full">
+    <div className="flex justify-center items-center bg-gray-100 py-10 w-full mt-30">
       <Swiper
         effect="coverflow"
         grabCursor={true}
@@ -60,13 +59,17 @@ const Carousel = () => {
           const encodedProductName = encodeURIComponent(product.name.toLowerCase());
 
           return (
-            <SwiperSlide key={index} className="flex justify-center">
-              <a href={`/product/${encodedProductName}`}>
+            <SwiperSlide key={index} className="flex flex-col items-center">
+              <a href={`/product/${encodedProductName}`} className="text-center">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-auto max-h-[600px] object-contain rounded-xl shadow-md"
                 />
+                {/* Product Name Below Image */}
+                <h3 className="mt-4 text-lg font-bold text-black-700">
+                  {product.name.replace("%20", " ")}
+                </h3>
               </a>
             </SwiperSlide>
           );
