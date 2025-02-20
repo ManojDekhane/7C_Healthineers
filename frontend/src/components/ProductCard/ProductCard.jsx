@@ -36,7 +36,6 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
 
       {category === "Pathology" && subCategory === "Pathology Machines" && brochureLink ? (
         <>
-       
           <button
             onClick={handleBrochureClick}
             className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800"
