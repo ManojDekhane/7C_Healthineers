@@ -126,36 +126,39 @@ const LandingPage = () => {
 
 
       {/* About Section */}
-      <div className="py-20 px-10 text-center bg-white">
-        <h1 className="text-3xl font-bold mb-10 text-gray-900">About Our Organization</h1>
-        <div className="flex flex-col md:flex-row justify-center items-stretch gap-12">
-          {/* Image */}
+      <div className="py-20 px-6 sm:px-10 text-center bg-white">
+      <h1 className="text-3xl font-bold mb-10 text-gray-900">About Our Organization</h1>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+        {/* Image */}
+        <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={about}
             alt="Organization"
-            className="w-full md:w-[700px] h-auto md:h-[400px] rounded-lg shadow-xl object-cover"
+            className="w-full max-w-md md:max-w-full h-auto rounded-lg shadow-xl object-cover"
           />
-
-          {/* Text Content */}
-          <div className="max-w-2xl text-lg leading-relaxed text-gray-700 font-bold text-justify space-y-3 font-[Tahoma] flex-1 flex items-center h-auto md:h-[400px]">
+        </div>
+        
+        {/* Text Content */}
+        <div className="w-full md:w-1/2 max-w-2xl text-lg leading-relaxed text-gray-700 font-bold text-justify space-y-3 font-[Tahoma] flex items-center">
+          <div>
             <p>
               <span className="text-xl text-blue-600">Who We Are?</span><br />
               Seven C Healthineer LLP specializes in supplying and trading high-quality medical equipment, including:
-              <ul className="list-none space-y-0.5 mt-2">
-                <li>✅ Anesthesia Workstations</li>
-                <li>✅ ICU Ventilators</li>
-                <li>✅ MRI Machines</li>
-                <li>✅ Ultrasound Systems</li>
-                <li>✅ Pathology Equipment</li>
-                <li>✅ Respiratory Infection</li>
-                <li>✅ Related Consumables</li>
-              </ul>
-              <span>We provide customized solutions to meet your specific needs—all at competitive prices.</span>
             </p>
+            <ul className="list-none space-y-1 mt-2">
+              <li>✅ Anesthesia Workstations</li>
+              <li>✅ ICU Ventilators</li>
+              <li>✅ MRI Machines</li>
+              <li>✅ Ultrasound Systems</li>
+              <li>✅ Pathology Equipment</li>
+              <li>✅ Respiratory Infection</li>
+              <li>✅ Related Consumables</li>
+            </ul>
+            <p>We provide customized solutions to meet your specific needs—all at competitive prices.</p>
           </div>
         </div>
-
       </div>
+    </div>
 
       <FeedbackSection />
 
