@@ -35,7 +35,7 @@ const RoutesComponent = () => {
         <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />
         <Route path="/product/:productName" element={<ProductDetail />} />
         <Route path="/profile" element={<ProfilePage />} />
-
+         
       </Route>
 
       {/* Protected Admin Dashboard Route (without Layout) */}
