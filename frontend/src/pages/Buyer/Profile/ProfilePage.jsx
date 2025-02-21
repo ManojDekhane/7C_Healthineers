@@ -26,6 +26,7 @@ Understanding the <strong>diverse and evolving</strong> needs of our clients, we
 
  <strong>Leadership & Vision :</strong>
  <br></br><hr style={{height:"2px",backgroundColor:"black"}}></hr>
+ 
 
 Under the <strong>visionary leadership</strong> of <strong> Mr. Dilshad Sayed</strong> and <strong>Mr. Khurshid Kazi, who bring </strong><strong>25+ years of groundbreaking expertise</strong> in the biomedical sector, we have earned a sterling reputation in this highly competitive market. Their strategic brilliance, in-depth industry knowledge, and dynamic leadership have been instrumental in gaining the unwavering trust of numerous clients across the region.
 

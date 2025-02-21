@@ -39,10 +39,13 @@ const Navbar = () => {
           {/* Location */}
           <div className="flex items-center space-x-1 md:space-x-2">
             <MdLocationOn className="text-sm md:text-base" />
-            <a href="https://www.google.co.in/maps/place/Suswani+Complex/" target="_blank" rel="noopener noreferrer" className="hover:font-semibold">
+            <a href="https://maps.app.goo.gl/nKoijwxXBvJHe4Dv9?g_st=aw" target="_blank" rel="noopener noreferrer" className="hover:font-semibold">
               Pune
             </a>
+            
           </div>
+          
+
 
           {/* Phone */}
           <div className="flex items-center space-x-1 md:space-x-2">

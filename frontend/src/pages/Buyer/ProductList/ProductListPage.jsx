@@ -21,8 +21,8 @@ const ProductListPage = () => {
     if (!selectedProducts || selectedProducts.length === 0) { // ✅ Prevent undefined errors
         return (
             <div className="flex items-center justify-center h-[60vh]">
-                <h2 className="text-2xl font-bold text-gray-800">No Products Found</h2>
-            </div>
+            <h2 className="text-2xl font-bold text-gray-800 mt-10">We're updating our inventory. Please check again soon!</h2>
+          </div>
         );
     }
 
