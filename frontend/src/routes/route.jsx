@@ -19,6 +19,7 @@ import ProductListPage from "../pages/Buyer/ProductList/ProductListPage";
 
 import AdminDashboard from "../pages/Seller/AdminDashboard/AdminDashboard";
 import ProductDetail from "../components/ProductDetail/ProductDetail"
+import GetAQuote from "../components/GetAQuote/GetAQuote";
 
 const RoutesComponent = () => {
   return (
@@ -33,7 +34,7 @@ const RoutesComponent = () => {
         <Route path="/product-category" element={<ProductCategoryPage />} />
         <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />
         <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />
-        <Route path="/subcategory/:subcategoryName/get-quote" element={<GetQuote />} />
+        <Route path="/subcategory/:subcategoryName/get-quote" element={<GetAQuote />} />
         <Route path="/product/:productName" element={<ProductDetail />} />
         <Route path="/profile" element={<ProfilePage />} />
          
