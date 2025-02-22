@@ -33,6 +33,7 @@ const RoutesComponent = () => {
         <Route path="/product-category" element={<ProductCategoryPage />} />
         <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />
         <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />
+        <Route path="/subcategory/:subcategoryName/get-quote" element={<GetQuote />} />
         <Route path="/product/:productName" element={<ProductDetail />} />
         <Route path="/profile" element={<ProfilePage />} />
          

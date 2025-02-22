@@ -17,6 +17,9 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
+
   };
 
   const handleBuyClick = (productName, price) => {
@@ -26,6 +29,7 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
 
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   };
+  
   
 
   return (

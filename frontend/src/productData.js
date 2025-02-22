@@ -286,9 +286,9 @@ const productData = [
                 ]
             },
             {
-                name: "Pathology Machines",
-                image: Smart_7_Advance,
-                products: [
+                "name": "Pathology Machines",
+                "image": Smart_7_Advance,
+                "products": [
                     {
                         "name": "XP300",
                         "image": Xp_300,
