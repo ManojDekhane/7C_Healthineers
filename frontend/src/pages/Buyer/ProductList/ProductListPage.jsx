@@ -5,6 +5,7 @@ import ProductCard from "../../../components/ProductCard/ProductCard";
 
 const ProductListPage = () => {
     const { subcategoryName } = useParams();
+    console.log("SubcategoryName:", subcategoryName);
     const decodedSubcategoryName = decodeURIComponent(subcategoryName);
 
     let selectedCategory = null;

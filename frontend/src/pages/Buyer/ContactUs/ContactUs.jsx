@@ -22,7 +22,7 @@ const ContactUs = () => {
         console.log("Sending data:", { type: "contact", ...formData });
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/contact`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/contact`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
