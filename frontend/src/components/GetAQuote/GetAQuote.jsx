@@ -10,6 +10,8 @@ const GetAQuote = ({ isOpen, onClose, productName }) => {
 
     
 
+    
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -25,7 +27,7 @@ const GetAQuote = ({ isOpen, onClose, productName }) => {
         }
     
         try {
-            const response = await fetch(`${process.env.BACKEND_URL}/get-quote`, {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get-quote`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 
@@ -54,6 +56,7 @@ const GetAQuote = ({ isOpen, onClose, productName }) => {
     if (!isOpen) return null;
 
     return (
+        
         <div className="fixed inset-0 flex items-start justify-center bg-black bg-opacity-50 p-4 pt-36 mt-4">
             <div className="bg-white p-6 rounded-xl shadow-2xl w-full max-w-md h-[72vh] flex flex-col">
                 {/* Scrollable container */}

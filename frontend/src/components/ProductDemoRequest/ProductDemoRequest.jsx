@@ -24,7 +24,7 @@ const ProductDemoRequest = ({ isOpen, onClose, productName }) => {
         }
 
         try {
-            const response = await fetch(`${process.env.BACKEND_URL}/request-demo`, {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/request-demo`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ type: "demo", ...formData }),
