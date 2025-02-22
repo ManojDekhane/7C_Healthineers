@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
 # Package files (to ignore package.json and package-lock.json)
 package.json
 package-lock.json
