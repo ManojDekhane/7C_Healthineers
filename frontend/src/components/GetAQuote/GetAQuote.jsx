@@ -27,7 +27,7 @@ const GetAQuote = ({ isOpen, onClose, productName }) => {
         }
     
         try {
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/get-quote`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/get-quote`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 

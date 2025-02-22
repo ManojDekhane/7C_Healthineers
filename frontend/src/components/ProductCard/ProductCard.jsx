@@ -18,7 +18,6 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
     link.click();
     document.body.removeChild(link);
 
-    console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
 
   };
 
