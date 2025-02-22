@@ -25,7 +25,7 @@ const GetAQuote = ({ isOpen, onClose, productName }) => {
         }
     
         try {
-            const response = await fetch("http://localhost:5000/api/get-quote", {
+            const response = await fetch(`${process.env.BACKEND_URL}/get-quote`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 

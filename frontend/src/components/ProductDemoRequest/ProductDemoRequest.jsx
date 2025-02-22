@@ -24,7 +24,7 @@ const ProductDemoRequest = ({ isOpen, onClose, productName }) => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/request-demo", {
+            const response = await fetch(`${process.env.BACKEND_URL}/request-demo`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ type: "demo", ...formData }),
