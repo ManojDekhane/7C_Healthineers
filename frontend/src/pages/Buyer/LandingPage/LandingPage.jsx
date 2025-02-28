@@ -8,6 +8,10 @@ import Background from "../../../assets/LandingPageProduct/background.jpg";
 import about from "../../../assets/LandingPageProduct/about.webp"
 import FeedbackSection from "../FeedbackSection/FeedbackSection";
 import ProductNavbar from "../Products/ProductNavbar";
+import CatalogueCard from "../../../components/CatalogueCard/CatalogueCard";
+
+import card1 from '../../../assets/catalogue_cards/catalogue_card_1.jpg'
+import card2 from '../../../assets/catalogue_cards/catalogue_card_2.jpg'
 
 const LandingPage = () => {
   return (
@@ -161,6 +165,8 @@ const LandingPage = () => {
     </div>
 
       <FeedbackSection />
+
+      <CatalogueCard card1={card1} card2={card2} />
 
       {/* Contact Section */}
       <div className="m-6">
