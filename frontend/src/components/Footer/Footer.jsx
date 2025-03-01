@@ -19,7 +19,7 @@ const Footer = () => {
 
           {/* Sister Companies */}
           <div>
-          <h3 className="text-2xl font-bold">Opening Hours</h3>
+            <h3 className="text-2xl font-bold">Opening Hours</h3>
             <ul className="mt-4 text-gray-300 space-y-2">
               <li><strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM</li>
               <li><strong>Saturday:</strong> 10:00 AM - 5:00 PM</li>
@@ -29,7 +29,7 @@ const Footer = () => {
 
           {/* Opening Hours */}
           <div>
-          
+
           </div>
 
           {/* Contact Information + Social Media */}
@@ -88,13 +88,15 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} Seven C Healthineers LLP. All Rights Reserved.</p>
-          <div className="mt-2 flex justify-center space-x-4">
+        <div className="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400 text-base sm:text-lg">
+          <p>© {new Date().getFullYear()} Seven C Healthineers LLP.</p>
+          <p>All Rights Reserved.</p>
+          <div className="mt-2 flex justify-center gap-4">
             <a href="#" className="hover:text-white transition duration-300">Privacy Policy</a>
             <a href="#" className="hover:text-white transition duration-300">Terms & Conditions</a>
           </div>
         </div>
+
 
       </div>
     </footer>
