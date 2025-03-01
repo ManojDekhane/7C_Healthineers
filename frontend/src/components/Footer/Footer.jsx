@@ -9,7 +9,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import logo from "../../assets/SevenC-logo/logo.png";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -60,7 +60,18 @@ const Footer = () => {
                   href="mailto:KmKazi@7chealthineers.com"
                   className="hover:text-white hover:font-semibold"
                 >
+                 
                   KmKazi@7chealthineers.com
+                </a>
+              </li>
+              <li className="flex items-center justify-center md:justify-start">
+                <FaEnvelope className="mr-2 text-sky-500" />
+                <a
+                  href="mailto:info@7chealthineers.com"
+                  className="hover:text-white hover:font-semibold"
+                >
+                 
+                 info@7chealthineers.com
                 </a>
               </li>
             </ul>
@@ -92,8 +103,8 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} Seven C Healthineers LLP.</p>
           <p>All Rights Reserved.</p>
           <div className="mt-2 flex justify-center gap-4">
-            <a href="#" className="hover:text-white transition duration-300">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition duration-300">Terms & Conditions</a>
+            <Link to="/PrivacyPolicy" className="hover:text-white transition duration-300">Privacy Policy</Link>
+            <Link to="/TermsAndConditions" className="hover:text-white transition duration-300">Terms & Conditions</Link>
           </div>
         </div>
 

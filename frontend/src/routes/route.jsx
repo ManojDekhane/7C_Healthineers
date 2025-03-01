@@ -20,7 +20,8 @@ import ProductListPage from "../pages/Buyer/ProductList/ProductListPage";
 import AdminDashboard from "../pages/Seller/AdminDashboard/AdminDashboard";
 import ProductDetail from "../components/ProductDetail/ProductDetail"
 import GetAQuote from "../components/GetAQuote/GetAQuote";
-
+import PrivacyPolicy from "../pages/Buyer/PrivacyPolicy/PrivacyPolicy";
+import TermsAndConditions from "../pages/Buyer/TermsAndCondition/TermsAndCondition";
 const RoutesComponent = () => {
   return (
     <Routes>
@@ -37,6 +38,9 @@ const RoutesComponent = () => {
         <Route path="/subcategory/:subcategoryName/get-quote" element={<GetAQuote />} />
         <Route path="/product/:productName" element={<ProductDetail />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
+        <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
+       
          
       </Route>
 
