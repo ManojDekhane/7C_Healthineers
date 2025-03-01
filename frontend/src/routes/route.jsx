@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "../components/auth/PrivateRoute";
-import Layout from "../routes/Layout"; 
+import Layout from "../routes/Layout";
 
 // Pages
 import LandingPage from "../pages/Buyer/LandingPage/LandingPage";
@@ -22,33 +22,38 @@ import ProductDetail from "../components/ProductDetail/ProductDetail"
 import GetAQuote from "../components/GetAQuote/GetAQuote";
 import PrivacyPolicy from "../pages/Buyer/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "../pages/Buyer/TermsAndCondition/TermsAndCondition";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+
 const RoutesComponent = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/product-category" element={<ProductCategoryPage />} />
-        <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />
-        <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />
-        <Route path="/subcategory/:subcategoryName/get-quote" element={<GetAQuote />} />
-        <Route path="/product/:productName" element={<ProductDetail />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
-        <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
-       
-         
-      </Route>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/product-category" element={<ProductCategoryPage />} />
+          <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />
+          <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />
+          <Route path="/subcategory/:subcategoryName/get-quote" element={<GetAQuote />} />
+          <Route path="/product/:productName" element={<ProductDetail />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
 
-      {/* Protected Admin Dashboard Route (without Layout) */}
-      <Route element={<PrivateRoute />}>
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
-      </Route>
-    </Routes>
+
+        </Route>
+
+        {/* Protected Admin Dashboard Route (without Layout) */}
+        <Route element={<PrivateRoute />}>
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 
