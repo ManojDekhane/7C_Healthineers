@@ -3,7 +3,7 @@ import React from "react";
 const CatalogueCard = ({ card1, card2 }) => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-6 p-6 bg-white shadow-lg rounded-2xl">
-      <div className="group w-full md:w-1/4 sm:w-1/4 overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-105">
+      <div className="group w-full md:w-1/4 overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-105">
         <img
           src={card1}
           alt="Catalogue Item 1"
@@ -11,7 +11,7 @@ const CatalogueCard = ({ card1, card2 }) => {
         />
       </div>
 
-      <div className="group w-full md:w-1/4 sm:w-1/4 overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-105">
+      <div className="group w-full md:w-1/4 overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-105">
         <img
           src={card2}
           alt="Catalogue Item 2"
