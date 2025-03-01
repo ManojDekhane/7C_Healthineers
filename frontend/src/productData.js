@@ -50,6 +50,29 @@ const productData = [
                 image: mri,
                 products: [
                     {
+                        name: "G-scan Brio",
+                        image: g_scan_brio,
+                        description: " The G-scan Brio introduces an innovative approach to musculoskeletal MRI, incorporating weight-bearing capabilities to enhance diagnostic accuracy. Its open and tilting design allows for dynamic imaging, providing deeper insights into patient-specific conditions.",
+                        features: [
+                            { title: "Compact Installation", description: "A single-room MRI system requiring only 23m²." },
+                            { title: "Specialized Imaging Coils", description: "12 dedicated multi-purpose coils tailored for spine and joint imaging." },
+                            { title: "Dynamic Imaging", description: "Enables combination of weight-bearing exams with dedicated sequences for improved diagnostic clarity." },
+                            { title: "Eco-Friendly", description: "Consumes <3 kW, ensuring sustainable operation." }
+                        ]
+                    },
+                    {
+                        name: "O-scan",
+                        image: o_scan,
+                        description: "O-scan is a high-efficiency extremity MRI system, designed to meet the needs of specialized clinics and radiology departments. Its compact footprint and advanced imaging capabilities make it an optimal choice for cost-effective and high-quality musculoskeletal imaging.",
+                        features: [
+                            { title: "Ultra-Low Acoustic Noise", description: "Operates at 59.7 dB, minimizing patient discomfort." },
+                            { title: "Compact Design", description: "Requires only 9m², allowing seamless installation in various clinical settings." },
+                            { title: "Energy Efficient", description: "Utilizes only 1 kW, ensuring minimal operational costs." },
+                            { title: "High Throughput", description: "Capable of scanning up to 3 patients per hour, optimizing workflow efficiency." }
+                        ]
+                    }
+                    ,
+                    {
                         name: "Magnifico Open",
                         image: Magnifico_Open,
                         description: " Magnifico Open represents the forefront of MRI technology, combining advanced imaging capabilities with an energy-efficient permanent magnet to ensure superior diagnostic quality and cost-effectiveness. Engineered for both patient comfort and clinical efficiency, this open MRI system is designed to meet the needs of modern radiology practices.",
@@ -73,30 +96,9 @@ const productData = [
                         ]
                     },
 
-                    {
-                        name: "G-scan Brio",
-                        image: g_scan_brio,
-                        description: " The G-scan Brio introduces an innovative approach to musculoskeletal MRI, incorporating weight-bearing capabilities to enhance diagnostic accuracy. Its open and tilting design allows for dynamic imaging, providing deeper insights into patient-specific conditions.",
-                        features: [
-                            { title: "Compact Installation", description: "A single-room MRI system requiring only 23m²." },
-                            { title: "Specialized Imaging Coils", description: "12 dedicated multi-purpose coils tailored for spine and joint imaging." },
-                            { title: "Dynamic Imaging", description: "Enables combination of weight-bearing exams with dedicated sequences for improved diagnostic clarity." },
-                            { title: "Eco-Friendly", description: "Consumes <3 kW, ensuring sustainable operation." }
-                        ]
-                    },
+                    
 
-                    {
-                        name: "O-scan",
-                        image: o_scan,
-                        description: "O-scan is a high-efficiency extremity MRI system, designed to meet the needs of specialized clinics and radiology departments. Its compact footprint and advanced imaging capabilities make it an optimal choice for cost-effective and high-quality musculoskeletal imaging.",
-                        features: [
-                            { title: "Ultra-Low Acoustic Noise", description: "Operates at 59.7 dB, minimizing patient discomfort." },
-                            { title: "Compact Design", description: "Requires only 9m², allowing seamless installation in various clinical settings." },
-                            { title: "Energy Efficient", description: "Utilizes only 1 kW, ensuring minimal operational costs." },
-                            { title: "High Throughput", description: "Capable of scanning up to 3 patients per hour, optimizing workflow efficiency." }
-                        ]
-                    }
-                    ,
+                    
                     {
                         name: "S-scan",
                         image: s_scan,
