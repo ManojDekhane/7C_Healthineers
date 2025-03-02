@@ -1,6 +1,7 @@
 import React from "react";
 import ContactUs from "../ContactUs/ContactUs";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 import esaoteLogo from "../../../assets/SevenC-logo/esaotelogo.png"
 import Carousel from "../Carousel/Carousel";
@@ -16,6 +17,11 @@ import card2 from '../../../assets/catalogue_cards/catalogue_card_2.jpg'
 const LandingPage = () => {
   return (
     <>
+      <Helmet>
+        <title>Seven C Healthineers - Revolutionizing Healthcare</title>
+        <meta name="description" content="Seven C Healthineers brings innovative healthcare solutions to improve patient care and medical technology." />
+        <meta name="keywords" content="Seven C Healthineers, Healthcare, Medical Innovations, Patient Care" />
+      </Helmet>
       <div className="mt-10">
         <ProductNavbar /></div>
 
@@ -131,38 +137,38 @@ const LandingPage = () => {
 
       {/* About Section */}
       <div className="py-20 px-6 sm:px-10 text-center bg-white">
-      <h1 className="text-3xl font-bold mb-10 text-gray-900">About Our Organization</h1>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
-        {/* Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img
-            src={about}
-            alt="Organization"
-            className="w-full max-w-md md:max-w-full h-auto rounded-lg shadow-xl object-cover"
-          />
-        </div>
-        
-        {/* Text Content */}
-        <div className="w-full md:w-1/2 max-w-2xl text-lg leading-relaxed text-gray-700 font-bold text-justify space-y-3 font-[Tahoma] flex items-center">
-          <div>
-            <p>
-              <span className="text-xl text-blue-600">Who We Are?</span><br />
-              Seven C Healthineer LLP specializes in supplying and trading high-quality medical equipment, including:
-            </p>
-            <ul className="list-none space-y-1 mt-2">
-              <li>✅ Anesthesia Workstations</li>
-              <li>✅ ICU Ventilators</li>
-              <li>✅ MRI Machines</li>
-              <li>✅ Ultrasound Systems</li>
-              <li>✅ Pathology Equipment</li>
-              <li>✅ Respiratory Infection</li>
-              <li>✅ Related Consumables</li>
-            </ul>
-            <p>We provide customized solutions to meet your specific needs—all at competitive prices.</p>
+        <h1 className="text-3xl font-bold mb-10 text-gray-900">About Our Organization</h1>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+          {/* Image */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src={about}
+              alt="Organization"
+              className="w-full max-w-md md:max-w-full h-auto rounded-lg shadow-xl object-cover"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div className="w-full md:w-1/2 max-w-2xl text-lg leading-relaxed text-gray-700 font-bold text-justify space-y-3 font-[Tahoma] flex items-center">
+            <div>
+              <p>
+                <span className="text-xl text-blue-600">Who We Are?</span><br />
+                Seven C Healthineer LLP specializes in supplying and trading high-quality medical equipment, including:
+              </p>
+              <ul className="list-none space-y-1 mt-2">
+                <li>✅ Anesthesia Workstations</li>
+                <li>✅ ICU Ventilators</li>
+                <li>✅ MRI Machines</li>
+                <li>✅ Ultrasound Systems</li>
+                <li>✅ Pathology Equipment</li>
+                <li>✅ Respiratory Infection</li>
+                <li>✅ Related Consumables</li>
+              </ul>
+              <p>We provide customized solutions to meet your specific needs—all at competitive prices.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
       <FeedbackSection />
 

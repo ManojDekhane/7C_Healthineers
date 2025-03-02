@@ -338,7 +338,7 @@ const productData = [
                  ]
             },
             {
-                name:"Vantilator",
+                name:"Ventilator",
                 image:"https://5.imimg.com/data5/SELLER/Default/2024/8/446189642/AJ/CM/VO/3049048/icu-ventilators-1000x1000.jpg",
                 // products:[
                 //     {

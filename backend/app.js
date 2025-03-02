@@ -6,7 +6,13 @@ const sendMail = require("./nodemailer/nodemailer");
 const app = express();
 app.use(express.json());
 app.use(cors());
+const path = require("path");
 
+app.use(express.static(path.join(__dirname, "../frontend/public")));
+
+app.get("/sitemap.xml", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/public/sitemap.xml"));
+})
 
 app.post("/api/contact", async (req, res) => {
     console.log("Received request body:", req.body); // 🔍 Debugging log
