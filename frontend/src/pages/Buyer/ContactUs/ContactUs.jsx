@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const ContactUs = () => {
@@ -13,7 +13,7 @@ const ContactUs = () => {
 
     // const marginTopClass = location.pathname === "/contact-us" ? "mt-44" : "mt-10";
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         setMarginTopClass(location.pathname === "/contact-us" ? "mt-44" : "mt-10");
     }, [location.pathname]);
 
