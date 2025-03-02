@@ -50,7 +50,7 @@ const Footer = () => {
               <li className="flex items-center justify-center md:justify-start">
                 <FaPhone className="mr-2 text-sky-500 transform scale-x-[-1]" />
                 <a href="tel:+918484845154" className="hover:text-white hover:font-semibold transition duration-300">
-                  +91 8484845154
+                  +91 84 84 84 51 54
                 </a>
               </li>
               <li className="flex items-center justify-center md:justify-start">
