@@ -30,10 +30,10 @@ const Gallery = () => {
   const allImages = [...productImages, ...staticImages];
 
   return (
-    <div className="container mx-auto p-6 mt-28">
+    <div className="container mx-auto p-6 mt-20">
       {/* Gallery Section */}
       <h2 className="text-3xl font-bold text-center mb-7 text-gray-800 p-10 mt-16">
-        Gallery
+       Product Gallery
       </h2>
 
       {/* Combined Product & Static Images Section */}
