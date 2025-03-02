@@ -1,21 +1,11 @@
-import { useLayoutEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
-const ContactUs = () => {
+const ContactUs = ({ marginTop = "mt-10 "}) => {
     const [formData, setFormData] = useState({
         name: "",
         userEmail: "",
         message: ""
     });
-
-    const location = useLocation();
-    const [marginTopClass, setMarginTopClass] = useState("mt-10");
-
-    useLayoutEffect(() => {
-        console.log("Pathname changed:", location.pathname);
-        setMarginTopClass(location.pathname === "/contact-us" ? "mt-44" : "mt-10");
-    }, [location.pathname]);
-    
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -53,10 +43,8 @@ const ContactUs = () => {
         }
     };
 
-    // <div className="hidden mt-44 mt-10"></div>
-
     return (
-        <div className={`max-w-md mx-auto p-6 bg-white shadow-md rounded-lg ${marginTopClass}`}>
+        <div className={`max-w-md mx-auto p-6 bg-white shadow-md rounded-lg ${marginTop}`}>
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <input
