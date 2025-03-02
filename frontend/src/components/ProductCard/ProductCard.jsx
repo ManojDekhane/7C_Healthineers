@@ -33,7 +33,7 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
 
   return (
     <div className="w-52 md:w-56 lg:w-60 bg-white border rounded-lg shadow-md p-3 flex flex-col items-center hover:shadow-lg transition-all duration-300">
-     {category !== "pathology" && subCategory !== "Pathology Consumable(Reagents)"&& (
+     {category !== "pathology" && subCategory !== "Haematology Reagents"&& (
   <img src={image || defaultImage} alt={name} className=" w-28 h-32 object-contain mb-2" />
 )}
       <h3 className="text-md font-bold text-center text-gray-800">{name}</h3>
@@ -60,7 +60,7 @@ const ProductCard = ({ image, name, category, subCategory, brochureLink, price }
           
           <GetAQuote isOpen={isModalOpen} onClose={() => setModalOpen(false)} productName={name} />
         </>
-      ) : category === "Pathology" && subCategory === "Pathology Consumable(Reagents)" ? (
+      ) : category === "Pathology" && subCategory === "Haematology Reagents" ? (
         <>
           <p className="text-sm text-gray-700 font-bold mt-2">Price: ₹{price ? price : "N/A"} + GST</p>
 
