@@ -11,11 +11,11 @@ const ContactUs = () => {
     const location = useLocation();
     const [marginTopClass, setMarginTopClass] = useState("mt-10");
 
-    // const marginTopClass = location.pathname === "/contact-us" ? "mt-44" : "mt-10";
-
     useLayoutEffect(() => {
+        console.log("Pathname changed:", location.pathname);
         setMarginTopClass(location.pathname === "/contact-us" ? "mt-44" : "mt-10");
     }, [location.pathname]);
+    
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -52,6 +52,8 @@ const ContactUs = () => {
             alert("Something went wrong.");
         }
     };
+
+    // <div className="hidden mt-44 mt-10"></div>
 
     return (
         <div className={`max-w-md mx-auto p-6 bg-white shadow-md rounded-lg ${marginTopClass}`}>
