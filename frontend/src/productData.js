@@ -258,7 +258,7 @@ const productData = [
         image: Pathology,
         subCategories: [
             {
-                "name": "Pathology Consumable(Reagents)",
+                "name": "Haematology Reagents",
                 "image": pathology_consumables,
                 "products": [
                     {
@@ -292,19 +292,19 @@ const productData = [
                 "image": Smart_7_Advance,
                 "products": [
                     {
-                        "name": "XP300",
+                        "name": "XP300 Fully automatic Blood Cell counter Sysmex(JAPAN)",
                         "image": Xp_300,
                         "description": "A high-quality diluent solution for laboratory use, ensuring accurate and reliable results.",
                         "brochureLink": Sysmex_xp300_PDF,
                     },
                     {
-                        "name": "Orbit Smart 7",
+                        "name": "Orbit Smart 7 Biochemistry Analyser (Semi-Auto)",
                         "image": Smart_7_Advance,
                         "description": "An advanced lysis solution designed for optimal sample preparation and cell analysis.",
                         "brochureLink": Smart_7_Advance_PDF,
                     },
                     {
-                        "name": "Patholyte Advance",
+                        "name": "Patholyte Advance Electrolyte Fully Auto Analyser(Na/K/CL/iCa)",
                         "image": Electrolyte_AnalyzersPatholyte,
                         "description": "A powerful cleaning solution for maintaining laboratory equipment and ensuring contamination-free testing.",
                         "brochureLink": New_Patholyte_Advance_PDF,
@@ -355,7 +355,7 @@ const productData = [
                 //  ]
             },{
                 name:"Anasthesia",
-                image:"https://5.imimg.com/data5/SELLER/Default/2024/8/446202157/ZV/EU/TN/3049048/anaesthesia-workstation-machine-1000x1000.jpg",
+                image:"https://www.shutterstock.com/image-illustration/anaesthetic-machine-isolated-on-white-600nw-2524384099.jpg",
                 // products:[
                 //     {
                 //         "name": "",
