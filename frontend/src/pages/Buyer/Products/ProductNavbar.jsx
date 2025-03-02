@@ -12,7 +12,7 @@ const Productcou = () => {
   const allSubCategories = productData.flatMap((category) => category.subCategories || []);
 
   // Separate "Pathology Consumables" and "Pathology Machines"
-  const specialCategories = ["Pathology Consumable(Reagents)", "Pathology Machines"];
+  const specialCategories = ["Haeomatology Reagents", "Pathology Machines"];
   const regularSubCategories = allSubCategories.filter(sub => !specialCategories.includes(sub.name));
   const specialSubCategories = allSubCategories.filter(sub => specialCategories.includes(sub.name));
 
