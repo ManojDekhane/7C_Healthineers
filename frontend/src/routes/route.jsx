@@ -34,7 +34,7 @@ const RoutesComponent = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/contact-us" element={<ContactUs marginTop="mt-44" />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/product-category" element={<ProductCategoryPage />} />
           <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />

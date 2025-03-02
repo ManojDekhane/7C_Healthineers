@@ -176,7 +176,7 @@ const LandingPage = () => {
 
       {/* Contact Section */}
       <div className="m-6">
-        <ContactUs />
+        <ContactUs marginTop="mt-10" />
       </div>
 
     </>
