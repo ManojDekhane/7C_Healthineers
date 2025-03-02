@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const ContactUs = () => {
@@ -9,8 +9,13 @@ const ContactUs = () => {
     });
 
     const location = useLocation();
+    const [marginTopClass, setMarginTopClass] = useState("mt-10");
 
-    const marginTopClass = location.pathname === "/contact-us" ? "mt-44" : "mt-10";
+    // const marginTopClass = location.pathname === "/contact-us" ? "mt-44" : "mt-10";
+
+    useEffect(() => {
+        setMarginTopClass(location.pathname === "/contact-us" ? "mt-44" : "mt-10");
+    }, [location.pathname]);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
