@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import productData from '../../../productData';
 
 const Gallery = () => {
@@ -9,24 +10,31 @@ const Gallery = () => {
     );
 
     return (
-        <div className="container mx-auto p-6 mt-28">
-            <h2 className="text-3xl font-bold text-center mb-7 text-gray-800 mt-35 p-10">Product Gallery</h2>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {images.map((img, index) => (
-                    <div 
-                        key={index} 
-                        className="border rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
-                    >
-                        <img 
-                            src={img} 
-                            alt={`Product ${index}`} 
-                            className="w-full h-auto object-cover aspect-[4/3]"
-                        />
-                    </div>
-                ))}
+        <>
+            <Helmet>
+                <title>Gallery - Our Healthcare Innovations | Seven C Healthineers</title>
+                <meta name="description" content="Explore our gallery showcasing Seven C Healthineers' latest medical innovations and technology." />
+                <meta name="keywords" content="Healthcare Gallery, Medical Technology, Seven C Healthineers, Innovations" />
+            </Helmet>
+            <div className="container mx-auto p-6 mt-28">
+                <h2 className="text-3xl font-bold text-center mb-7 text-gray-800 mt-35 p-10">Product Gallery</h2>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {images.map((img, index) => (
+                        <div
+                            key={index}
+                            className="border rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
+                        >
+                            <img
+                                src={img}
+                                alt={`Product ${index}`}
+                                className="w-full h-auto object-cover aspect-[4/3]"
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

@@ -1,12 +1,15 @@
 import React from "react";
 import RoutesComponent from "./routes/route";
 import { AuthProvider } from "./contexts/authContext/firebaseContext";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
-    <AuthProvider>
-      <RoutesComponent />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <RoutesComponent />
+      </AuthProvider>
+    </HelmetProvider>
   );
 }
 
