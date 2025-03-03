@@ -39,6 +39,7 @@ import ultrasound from "../src/assets/images/Ultrasound.jpg";
 import pathology_consumables from "../src/assets/Subcategory-images/Pathology_consumables.jpg";
 //Crtical Care
 import et_1000 from "../src/assets/CriticalCare/ET-1000.webp";
+
 const productData = [
     {
         category: "Radiology and Diagnostic",
