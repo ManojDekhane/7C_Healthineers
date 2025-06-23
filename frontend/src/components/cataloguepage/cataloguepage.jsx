@@ -4,7 +4,7 @@ import oscan from "../../assets/pdf/O-scan.pdf"
 import sscan from "../../assets/pdf/S_scan.pdf";
 import sscanopen from "../../assets/pdf/S-scan_OPEN.pdf";
 import Magnificioscan from "../../assets/pdf/Magnifico_Open.pdf";
-import gscan from "../../assets/pdf/G_scan_open.pdf";
+
 import mylaba50 from "../../assets/pdf/mylab_A50.pdf";
 import mylaba70 from "../../assets/pdf/mylab_A70.pdf";
 import mylabx75 from "../../assets/pdf/MyLab_X75.pdf";
@@ -29,7 +29,7 @@ const CataloguePage = () => {
          { title: "S-Scan", file: sscan },
           { title: "S-scan Open", file: sscanopen },
            { title: "Magnifico Open", file: Magnificioscan },
-           { title: "G-scan Brio Open", file: gscan },
+           
 
       ],
     },
