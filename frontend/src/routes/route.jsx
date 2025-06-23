@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "../components/auth/PrivateRoute";
 import Layout from "../routes/Layout";
-
+import CataloguePage from "../components/cataloguepage/cataloguepage";
 // Pages
 import LandingPage from "../pages/Buyer/LandingPage/LandingPage";
 import ContactUs from "../pages/Buyer/ContactUs/ContactUs";
@@ -46,8 +46,7 @@ const RoutesComponent = () => {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
-
-
+          <Route path="/catalogue" element={<CataloguePage />} />
         </Route>
 
         {/* Protected Admin Dashboard Route (without Layout) */}

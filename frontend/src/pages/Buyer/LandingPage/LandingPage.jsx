@@ -2,7 +2,7 @@ import React from "react";
 import ContactUs from "../ContactUs/ContactUs";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-
+import metlogo from "../../../assets/SevenC-logo/metlogo.jpg";
 import esaoteLogo from "../../../assets/SevenC-logo/esaotelogo.png"
 import Carousel from "../Carousel/Carousel";
 import Background from "../../../assets/LandingPageProduct/background.jpg";
@@ -21,50 +21,7 @@ const LandingPage = () => {
         <title>Seven C Healthineers - Revolutionizing Healthcare</title>
         <meta name="description" content="Seven C Healthineers brings innovative healthcare solutions to improve patient care and medical technology." />
         <meta name="keywords" content="Seven C Healthineers, Healthcare, Medical Innovations, Patient Care" />
-        <meta property="og:type" content="website" />
-
-        <meta property="og:title" content="Seven C Healthineers - Revolutionizing Healthcare" />
-        <meta property="og:description" content="Delivering innovative healthcare and advanced medical equipment." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.7chealthineers.com/" />
-        <meta property="og:image" content="https://www.7chealthineers.com/images/logo.jpg" />
-
-        <link rel="canonical" href="https://www.7chealthineers.com/" />
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Seven C Healthineers LLP",
-            legalName: "Seven C Healthineers LLP",
-            url: "https://www.7chealthineers.com",
-            logo: "https://www.7chealthineers.com/images/logo.png", 
-            sameAs: [
-              "https://www.instagram.com/7c_healthineers?igsh=MW4xZmw3cnYzc3pyaw==" 
-            ],
-            contactPoint: [
-              {
-                "@type": "ContactPoint",
-                telephone: "+91-8484845154",
-                contactType: "customer support",
-                areaServed: "IN",
-                availableLanguage: ["English", "Hindi", "Marathi"]
-              }
-            ],
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Suswani Complex",
-              addressLocality: "Pune",
-              addressRegion: "MH",
-              postalCode: "411048",
-              addressCountry: "IN"
-            }
-          })}
-        </script>
       </Helmet>
-
-
-
       <div className="mt-10">
         <ProductNavbar /></div>
 
@@ -145,7 +102,20 @@ const LandingPage = () => {
                   className="h-7 sm:h-7 md:h-7 w-auto object-contain max-w-full"
                 />
               </a>
-
+              <a href="https://www.mek-ics.com/eng/Index" target="_blank">
+                <img
+                  src="https://www.mek-ics.com/img/header_ci.png"
+                  alt="meklogo"
+                  className="h-5 sm:h-5 md:h-5 w-auto object-contain max-w-full"
+                />
+              </a>
+                 <a href="https://www2.esaote.com/" target="_blank">
+                <img
+                  src={metlogo}
+                  alt="Esaote Logo"
+                  className="h-8 sm:h-8 md:h-8 w-auto object-contain max-w-full"
+                />
+              </a>
             </div>
           </div>
         </div>
