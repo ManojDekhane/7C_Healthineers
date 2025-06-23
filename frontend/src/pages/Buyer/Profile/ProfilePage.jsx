@@ -5,10 +5,16 @@ const ProfilePage = () => {
   return (
     <>
       <Helmet>
-        <title>Your Profile - Seven C Healthineers</title>
-        <meta name="description" content="View and update your personal profile at Seven C Healthineers." />
-        <meta name="keywords" content="Profile, Account, Seven C Healthineers, User Dashboard" />
-      </Helmet>
+  <title>Your Profile - Seven C Healthineers</title>
+  <meta name="description" content="Manage your personal profile and explore company information at Seven C Healthineers." />
+  <meta name="keywords" content="User Profile, Account Settings, Company Overview, Seven C Healthineers" />
+  <meta property="og:title" content="Your Profile - Seven C Healthineers" />
+  <meta property="og:description" content="Update your profile and learn more about Seven C Healthineers." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://www.7chealthineers.com/profile" />
+  <link rel="canonical" href="https://www.7chealthineers.com/profile" />
+</Helmet>
+
       <div className="container mx-auto mt-40 p-12 mb-10 text-gray-800">
         {/* Profile Section */}
         <h1 className="text-3xl font-bold text-blue-700 mb-4">Profile</h1>

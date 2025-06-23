@@ -23,6 +23,7 @@ import GetAQuote from "../components/GetAQuote/GetAQuote";
 import PrivacyPolicy from "../pages/Buyer/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "../pages/Buyer/TermsAndCondition/TermsAndCondition";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import AllProductsPage from "../pages/Buyer/AllProductsPage/AllProductsPage";
 
 const RoutesComponent = () => {
   return (
@@ -36,6 +37,7 @@ const RoutesComponent = () => {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/contact-us" element={<ContactUs marginTop="mt-44" />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/products" element={<AllProductsPage />} />
           <Route path="/product-category" element={<ProductCategoryPage />} />
           <Route path="/category/:categoryName" element={<ProductSubCategoryPage />} />
           <Route path="/subcategory/:subcategoryName" element={<ProductListPage />} />

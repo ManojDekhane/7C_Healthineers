@@ -7,8 +7,14 @@ const TermsAndConditions = () => {
       <Helmet>
         <title>Terms & Conditions - Seven C Healthineers</title>
         <meta name="description" content="Read the terms and conditions of using Seven C Healthineers' services." />
-        <meta name="keywords" content="Terms & Conditions, Legal, Healthcare Policies, Seven C Healthineers" />
+        <meta name="keywords" content="Terms and Conditions, Medical Equipment Policy, Healthcare Agreement, Seven C Healthineers" />
+        <meta property="og:title" content="Terms & Conditions - Seven C Healthineers" />
+        <meta property="og:description" content="Understand the usage policies and service terms of Seven C Healthineers." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.7chealthineers.com/TermsAndConditions" />
+        <link rel="canonical" href="https://www.7chealthineers.com/TermsAndConditions" />
       </Helmet>
+
 
       <div className="p-6 mt-40 mb-10 max-w-4xl mx-auto bg-white shadow-lg rounded-lg">
         <h1 className="text-2xl font-bold mb-4 text-sky-500">Terms and Conditions</h1>

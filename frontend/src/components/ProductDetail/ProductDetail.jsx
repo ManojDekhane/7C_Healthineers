@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import productData from "../../productData";
 import ProductDemoRequest from "../ProductDemoRequest/ProductDemoRequest";
@@ -40,10 +41,46 @@ const ProductDetail = () => {
       </div>
     );
   }
-  
+
 
   return (
+
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 px-6 py-12 pt-40">
+      <Helmet>
+        <title>{product.name} | Seven C Healthineers</title>
+        <meta name="description" content={product.description || `Explore ${product.name}, offered by Seven C Healthineers LLP`} />
+        <meta name="keywords" content={`${product.name}, medical equipment, healthcare, Seven C Healthineers`} />
+
+        <meta property="og:title" content={`${product.name} | Seven C Healthineers`} />
+        <meta property="og:description" content={product.description || 'Trusted medical equipment supplier.'} />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content={`https://www.7chealthineers.com/product/${productName}`} />
+
+        <link rel="canonical" href={`https://www.7chealthineers.com/product/${productName}`} />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            name: product.name,
+            image: [product.image],
+            description: product.description,
+            brand: {
+              "@type": "Brand",
+              name: "Seven C Healthineers"
+            },
+            offers: {
+              "@type": "Offer",
+              url: `https://www.7chealthineers.com/product/${encodeURIComponent(product.name)}`,
+              priceCurrency: "INR",
+              price: product.price || "0.00",
+              availability: "https://schema.org/InStock"
+            }
+          })}
+        </script>
+
+      </Helmet>
+
       {/* Product Name */}
       <h2 className="text-3xl sm:text-5xl font-extrabold text-center text-sky-700 mb-5 sm:mb-7 drop-shadow-md">{product.name}</h2>
 
@@ -95,7 +132,7 @@ const ProductDetail = () => {
 
       {/* Product Demo Request Modal */}
       <ProductDemoRequest isOpen={isModalOpen} onClose={() => setModalOpen(false)} productName={productName} />
-      
+
 
     </div>
   );
