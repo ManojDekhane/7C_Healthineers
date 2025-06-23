@@ -24,7 +24,7 @@ import PrivacyPolicy from "../pages/Buyer/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "../pages/Buyer/TermsAndCondition/TermsAndCondition";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import AllProductsPage from "../pages/Buyer/AllProductsPage/AllProductsPage";
-
+import CataloguePage from "../components/cataloguepage/CataloguePage";
 const RoutesComponent = () => {
   return (
     <>
@@ -46,6 +46,8 @@ const RoutesComponent = () => {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+          
+          <Route path="/catalogue" element={<CataloguePage />} />
 
 
         </Route>

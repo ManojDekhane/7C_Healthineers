@@ -11,9 +11,16 @@ import image4 from "../../../assets/GalleryImage/image4.jpg";
 import image5 from "../../../assets/GalleryImage/image5.jpg";
 import image6 from "../../../assets/GalleryImage/image6.jpg";
 import image7 from "../../../assets/GalleryImage/image7.jpg";
-
+import image8 from "../../../assets/GalleryImage/image8.jpg";
+import image9 from "../../../assets/GalleryImage/image9.jpg";
+import image10 from "../../../assets/GalleryImage/image10.jpg";
+import image11 from "../../../assets/GalleryImage/image11.jpg";
+import image12 from "../../../assets/GalleryImage/image12.jpg";
+import image13 from "../../../assets/GalleryImage/image13.jpg";
 // Static Images Array
-const staticImages = [image1, image3, image4, image5, image6, image7, image2];
+const staticImages = [image1, image3, image4, image5, image6, image7, image2,image8,
+    image9,image10,image11,image12,image13
+];
 
 const Gallery = () => {
     // Extract product images from productData
