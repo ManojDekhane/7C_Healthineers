@@ -7,6 +7,7 @@ const CatalogueCard = ({ card1, card2 }) => {
         <img
           src={card1}
           alt="Catalogue Item 1"
+          loading='lazy'
           className="w-full h-auto object-cover rounded-lg shadow-md"
         />
       </div>
@@ -15,6 +16,7 @@ const CatalogueCard = ({ card1, card2 }) => {
         <img
           src={card2}
           alt="Catalogue Item 2"
+          loading='lazy'
           className="w-full h-auto object-cover rounded-lg shadow-md"
         />
       </div>
