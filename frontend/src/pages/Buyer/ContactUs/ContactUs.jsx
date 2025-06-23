@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 const ContactUs = ({ marginTop = "mt-10 " }) => {
+    const location = useLocation();
     const [formData, setFormData] = useState({
         name: "",
         userEmail: "",
@@ -46,18 +48,35 @@ const ContactUs = ({ marginTop = "mt-10 " }) => {
 
     return (
         <div className={`max-w-md mx-auto p-6 bg-white shadow-md rounded-lg ${marginTop}`}>
-            <Helmet>
-                <title>Contact Us | Seven C Healthineers</title>
-                <meta name="description" content="Get in touch with Seven C Healthineers for inquiries, support, or partnership opportunities." />
-                <meta name="keywords" content="Contact Seven C Healthineers, Medical Equipment Inquiry, Support, Healthcare Solutions" />
-                <meta property="og:title" content="Contact Seven C Healthineers" />
-                <meta property="og:description" content="Reach out to our team for any medical equipment or healthcare service inquiries." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.7chealthineers.com/contact-us" />
-                <link rel="canonical" href="https://www.7chealthineers.com/contact-us" />
-            </Helmet>
+            {location.pathname === "/contact-us" && (
+                <Helmet>
+                    <title>Contact Seven C Healthineers | Medical Equipment & Support</title>
+                    <meta name="description" content="Get in touch with Seven C Healthineers LLP for biomedical equipment inquiries, demos, partnerships, or after-sales support across India." />
+                    <meta name="keywords" content="Contact Seven C Healthineers, Medical Equipment Inquiry, Support, Healthcare Solutions" />
+                    <meta property="og:title" content="Contact Seven C Healthineers" />
+                    <meta property="og:description" content="Reach out to our team for any medical equipment or healthcare service inquiries." />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:url" content="https://www.7chealthineers.com/contact-us" />
+                    <link rel="canonical" href="https://www.7chealthineers.com/contact-us" />
 
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+                    <script type="application/ld+json">
+                        {JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "ContactPage",
+                            "name": "Contact Seven C Healthineers LLP",
+                            "url": "https://www.7chealthineers.com/contact-us",
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": "https://www.7chealthineers.com/contact-us"
+                            }
+                        })}
+                    </script>
+
+                </Helmet>
+            )}
+
+
+            <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                     type="text"

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 const FeedbackSection = () => {
+
   const [feedbacks, setFeedbacks] = useState([
     { name: "John Doe", message: "Great service! Highly recommended." },
     { name: "Jane Smith", message: "The products are really good." },
@@ -24,11 +26,11 @@ const FeedbackSection = () => {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Feedback - Share Your Experience | Seven C Healthineers</title>
         <meta name="description" content="Tell us about your experience with Seven C Healthineers. Your feedback helps us improve!" />
         <meta name="keywords" content="Feedback, Seven C Healthineers Reviews, Customer Testimonials, Medical Services Feedback" />
-      </Helmet>
+      </Helmet> */}
       <div className="bg-gray-100 py-16 px-6 md:px-20">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Feedback</h2>
 

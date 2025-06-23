@@ -109,13 +109,13 @@ const LandingPage = () => {
                   className="h-5 sm:h-5 md:h-5 w-auto object-contain max-w-full"
                 />
               </a>
-                 <a href="https://www2.esaote.com/" target="_blank">
+              {/* <a href="https://www2.esaote.com/" target="_blank">
                 <img
                   src={metlogo}
                   alt="Esaote Logo"
                   className="h-8 sm:h-8 md:h-8 w-auto object-contain max-w-full"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
