@@ -79,10 +79,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mt-6">Follow Us</h4>
             <div className="flex justify-center md:justify-start space-x-4 mt-3">
               {[
-                { icon: FaInstagram, href: "#" },
-                { icon: FaTwitter, href: "#" },
-                { icon: FaFacebookF, href: "#" },
-                { icon: FaLinkedinIn, href: "#" },
+                { icon: FaInstagram, href: "https://www.instagram.com/7c_healthineers?igsh=MW4xZmw3cnYzc3pyaw==" },
+                // { icon: FaTwitter, href: "#" },
+                { icon: FaFacebookF, href: "https://www.facebook.com/share/192DQApji6/" },
+                { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/er-khurshid-kazi-a71770361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
               ].map(({ icon: Icon, href }, index) => (
                 <a
                   key={index}

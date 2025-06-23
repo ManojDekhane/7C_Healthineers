@@ -30,9 +30,15 @@ const Gallery = () => {
         <>
             <Helmet>
                 <title>Gallery - Our Healthcare Innovations | Seven C Healthineers</title>
-                <meta name="description" content="Explore our gallery showcasing Seven C Healthineers' latest medical innovations and technology." />
-                <meta name="keywords" content="Healthcare Gallery, Medical Technology, Seven C Healthineers, Innovations" />
+                <meta name="description" content="Explore the visual gallery of healthcare innovations, products, and events at Seven C Healthineers." />
+                <meta name="keywords" content="Healthcare Gallery, Medical Equipment, Product Images, Seven C Healthineers, Medical Technology" />
+                <meta property="og:title" content="Gallery - Seven C Healthineers" />
+                <meta property="og:description" content="A showcase of our medical equipment, technology, and innovations." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.7chealthineers.com/gallery" />
+                <link rel="canonical" href="https://www.7chealthineers.com/gallery" />
             </Helmet>
+
             <div className="container mx-auto p-6 mt-28">
                 {/* Media Gallery - Static Images Only */}
                 <h2 className="text-3xl font-bold text-center mb-7 text-gray-800 p-10">Media Gallery</h2>

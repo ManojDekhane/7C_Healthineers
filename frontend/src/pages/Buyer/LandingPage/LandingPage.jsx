@@ -21,7 +21,50 @@ const LandingPage = () => {
         <title>Seven C Healthineers - Revolutionizing Healthcare</title>
         <meta name="description" content="Seven C Healthineers brings innovative healthcare solutions to improve patient care and medical technology." />
         <meta name="keywords" content="Seven C Healthineers, Healthcare, Medical Innovations, Patient Care" />
+        <meta property="og:type" content="website" />
+
+        <meta property="og:title" content="Seven C Healthineers - Revolutionizing Healthcare" />
+        <meta property="og:description" content="Delivering innovative healthcare and advanced medical equipment." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.7chealthineers.com/" />
+        <meta property="og:image" content="https://www.7chealthineers.com/images/logo.jpg" />
+
+        <link rel="canonical" href="https://www.7chealthineers.com/" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Seven C Healthineers LLP",
+            legalName: "Seven C Healthineers LLP",
+            url: "https://www.7chealthineers.com",
+            logo: "https://www.7chealthineers.com/images/logo.png", 
+            sameAs: [
+              "https://www.instagram.com/7c_healthineers?igsh=MW4xZmw3cnYzc3pyaw==" 
+            ],
+            contactPoint: [
+              {
+                "@type": "ContactPoint",
+                telephone: "+91-8484845154",
+                contactType: "customer support",
+                areaServed: "IN",
+                availableLanguage: ["English", "Hindi", "Marathi"]
+              }
+            ],
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Suswani Complex",
+              addressLocality: "Pune",
+              addressRegion: "MH",
+              postalCode: "411048",
+              addressCountry: "IN"
+            }
+          })}
+        </script>
       </Helmet>
+
+
+
       <div className="mt-10">
         <ProductNavbar /></div>
 
