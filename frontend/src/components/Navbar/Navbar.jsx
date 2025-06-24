@@ -55,6 +55,7 @@ const Navbar = () => {
             </a>
           </div>
 
+
           {/* Email */}
           <div className="flex items-center space-x-1 md:space-x-2">
             <HiOutlineMail className="text-sm md:text-base" />
@@ -86,6 +87,7 @@ const Navbar = () => {
             <li><Link to="/profile" className="hover:text-sky-600 font-bold transition-colors">Profile</Link></li>
             <li><Link to="/product-category" className="hover:text-sky-600 font-bold transition-colors">Products</Link></li>
             <li><Link to="/gallery" className="hover:text-sky-600 font-bold transition-colors">Gallery</Link></li>
+            <li><Link to="/catalogue" className="hover:text-sky-600 font-bold transition-colors">Catalogue</Link></li>
             <li><Link to="/contact-us" className="hover:text-sky-600 font-bold transition-colors">Contact</Link></li>
           </ul>
 
@@ -119,6 +121,7 @@ const Navbar = () => {
               <li><Link to="/profile" onClick={() => setIsOpen(false)} className="hover:text-sky-600 font-bold">Profile</Link></li>
               <li><Link to="/product-category" onClick={() => setIsOpen(false)} className="hover:text-sky-600 font-bold">Products</Link></li>
               <li><Link to="/gallery" onClick={() => setIsOpen(false)} className="hover:text-sky-600 font-bold">Gallery</Link></li>
+              <li><Link to="/catalogue" onClick={() => setIsOpen(false)} className="hover:text-sky-600 font-bold">Catalogue</Link></li>
               <li><Link to="/contact-us" onClick={() => setIsOpen(false)} className="hover:text-sky-600 font-bold">Contact</Link></li>
             </ul>
           </div>

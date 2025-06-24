@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { PDFDocument } from "pdf-lib";
 
 import oscan from "../../assets/pdf/O-scan.pdf"
 import sscan from "../../assets/pdf/S_scan.pdf";
@@ -23,7 +24,9 @@ import omniox_series from "../../assets/pdf/OmniOx_Series.pdf";
 
 import newpatholyte from "../../assets/pdf/New_Patholyte_Advance.pdf";
 import smart7 from "../../assets/pdf/Smart-7_Advance_new.pdf";
+
 const CataloguePage = () => {
+
   const pdfCategories = [
     {
       category: "Radiology and Diagnostics → MRI",
@@ -66,50 +69,33 @@ const CataloguePage = () => {
         { title: "OmniOx_Series", file: omniox_series },
       ]
     }
-
   ];
 
-  // return (
-  //   <div className="pt-40 px-4 sm:px-8 lg:px-20 bg-gray-50 min-h-screen">
-  //     <h1 className="text-4xl font-bold mb-6 text-center text-blue-700"> Catalogue</h1>
+  const handleDownloadAllPDFs = async () => {
+    const mergedPdf = await PDFDocument.create();
 
-  //     {pdfCategories.map((category, catIndex) => (
-  //       <div key={catIndex} className="mb-10">
-  //         <h2 className="text-xl font-semibold text-gray-700 mb-4">{category.category}</h2>
+    // Flatten all file paths
+    const allPdfs = pdfCategories.flatMap(cat => cat.documents.map(doc => doc.file));
 
-  //         <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4">
-  //           {category.documents.map((pdf, index) => (
-  //             <div
-  //               key={index}
-  //               className="w-44 p-2 bg-white rounded-lg shadow-sm border text-sm flex flex-col justify-between"
-  //             >
-  //               <div>
-  //                 <h3 className="text-sm font-semibold mb-2 text-gray-800">{pdf.title}</h3>
+    for (let pdfUrl of allPdfs) {
+      const existingPdfBytes = await fetch(pdfUrl).then(res => res.arrayBuffer());
+      const pdf = await PDFDocument.load(existingPdfBytes);
+      const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+      copiedPages.forEach((page) => mergedPdf.addPage(page));
+    }
 
-  //                 {/* Static first-page preview with no scroll */}
-  //                 {/* <div className="w-full h-28 overflow-hidden rounded border">
-  //                   <embed
-  //                     src={`${pdf.file}#page=1&zoom=100&toolbar=0&navpanes=0&scrollbar=0`}
-  //                     type="application/pdf"
-  //                     className="w-full h-full"
-  //                   />
-  //                 </div> */}
-  //               </div>
+    const mergedPdfBytes = await mergedPdf.save();
 
-  //               <a
-  //                 href={pdf.file}
-  //                 download
-  //                 className="text-center px-2 py-1 mt-2 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition"
-  //               >
-  //                 ⬇️ Download PDF
-  //               </a>
-  //             </div>
-  //           ))}
-  //         </div>
-  //       </div>
-  //     ))}
-  //   </div>
-  // );
+    // Trigger browser download
+    const blob = new Blob([mergedPdfBytes], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'SevenCHealthineers_All_Catalogues.pdf';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
 
   return (
     <div className="pt-44 px-4 sm:px-6 md:px-12 lg:px-20 pb-20 min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
@@ -125,6 +111,17 @@ const CataloguePage = () => {
       <h1 className="text-4xl font-bold text-center text-sky-700 mb-12">
         Product Catalogues
       </h1>
+
+      <div className="text-center mb-12">
+        <button
+          onClick={handleDownloadAllPDFs}
+          className="bg-sky-600 hover:bg-sky-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow-md transition-all text-sm sm:text-base flex items-center justify-center gap-2 mx-auto w-fit"
+        >
+          <span className="animate-bounce" role="img" aria-label="Download">📥</span>
+          Download All Product Catalogues
+        </button>
+      </div>
+
 
       {pdfCategories.map((cat, i) => (
         <div key={i} className="mb-16">

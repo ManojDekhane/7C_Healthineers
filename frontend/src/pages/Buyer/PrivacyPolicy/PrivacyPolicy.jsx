@@ -5,15 +5,16 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Seven C Healthineers</title>
-        <meta name="description" content="Read our privacy policy to learn how we handle your data." />
-        <meta name="keywords" content="Privacy Policy, Data Protection, User Privacy, Seven C Healthineers" />
+        <title>Privacy Policy - Seven C Healthineers | Pune Biomedical Firm</title>
+        <meta name="description" content="Read the privacy practices of Seven C Healthineers LLP, a leading biomedical equipment firm in Pune, India." />
+        <meta name="keywords" content="Privacy Policy, Data Security, Pune Biomedical Company, Medical Equipment India, Seven C Healthineers LLP" />
         <meta property="og:title" content="Privacy Policy - Seven C Healthineers" />
-        <meta property="og:description" content="Find out how Seven C Healthineers collects and uses personal information." />
+        <meta property="og:description" content="Understand how we protect your personal and business information at Seven C Healthineers." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.7chealthineers.com/PrivacyPolicy" />
         <link rel="canonical" href="https://www.7chealthineers.com/PrivacyPolicy" />
       </Helmet>
+
 
       <div className="p-6 mt-40 mb-10 max-w-4xl mx-auto bg-white shadow-lg rounded-lg">
         <h1 className="text-2xl font-bold mb-4 text-sky-500">Privacy Policy</h1>

@@ -18,10 +18,18 @@ const LandingPage = () => {
   return (
     <>
       <Helmet>
-        <title>Seven C Healthineers - Revolutionizing Healthcare</title>
-        <meta name="description" content="Seven C Healthineers brings innovative healthcare solutions to improve patient care and medical technology." />
-        <meta name="keywords" content="Seven C Healthineers, Healthcare, Medical Innovations, Patient Care" />
+        <title>Seven C Healthineers - Biomedical Equipment Supplier in Pune</title>
+        <meta
+          name="description"
+          content="Seven C Healthineers LLP is a Pune-based biomedical equipment supplier offering MRI machines, ultrasound systems, ventilators, pathology devices, and healthcare solutions across India."
+        />
+        <meta
+          name="keywords"
+          content="Seven C Healthineers, Pune biomedical supplier, medical equipment India, MRI machines, ultrasound devices, ICU ventilators, pathology analyzer, healthcare solutions"
+        />
+        <link rel="canonical" href="https://www.7chealthineers.com/" />
       </Helmet>
+
       <div className="mt-10">
         <ProductNavbar /></div>
 
@@ -136,7 +144,7 @@ const LandingPage = () => {
 
 
         <div className="mt-12">
-          <Link to="/product-category">
+          <Link to="/products">
             <button className="bg-sky-600 hover:bg-sky-900 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:scale-105">
               VIEW ALL PRODUCTS
             </button>
@@ -183,7 +191,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <FeedbackSection />
+      {/* <FeedbackSection /> */}
 
       <CatalogueCard card1={card1} card2={card2} />
 
